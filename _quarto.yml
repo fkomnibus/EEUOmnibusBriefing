@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "EU Omnibus Briefing"
+  repo-url: https://github.com/clairembassett/EEUOmnibus.git
+  repo-branch: master
+
+  sidebar:
+    search: true
+
+  navbar:
+    left:
+     # - href: index.qmd
+     #   text: Home
+      - href: purpose.qmd
+        text: Purpose
+      - href: keyterms.qmd
+        text: Key Terms
+      - href: approvedchanges.qmd
+        text: Approved Changes
+      - href: proposedchanges.qmd
+        text: Proposed Changes
+      - href: clientapplication.qmd
+        text: Client Application
+      - href: secaffects.qmd
+        text: Secondary Affects to ETS
+
+format:
+  html:
+    embed-resources: true
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    
+
+
+    
+
+
+
