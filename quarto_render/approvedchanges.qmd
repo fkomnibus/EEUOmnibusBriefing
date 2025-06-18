@@ -1,8 +1,9 @@
 ---
-title: "Approved Changes"
 format: html
 jupyter: python3
 ---
+
+![](approvedheader.png){fig-align="center"}
 
 On 26 March 2025, the European Commission formally adopted the "Stop the Clock" proposal without initiating negotiations, in an effort to expedite the process and reduce uncertainty for businesses. The proposal postpones reporting deadlines under the CSRD and the CSDDD, allowing companies more time to prepare for the new disclosure requirements. Notably, there are no changes to the CSRD for Wave 1 and Wave 4 undertakings and issuers. The largest public-interest companies (Wave 1) are still required to report in 2025, based on financial years beginning on or after 1 January 2024.
 

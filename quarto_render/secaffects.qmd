@@ -1,6 +1,10 @@
+---
+format: html
+jupyter: python3
+---
+
+![](seceffectsheader.png){fig-align="center"}
+
 # Secondary Affects to the Emissions Trading Schemes
 
 While the Emissions Trading System(ETS) is not directly impacted by the EU Omnibus Package, secondary effects are likely due to related changes to the CSRD, CSDDD, and CBAM. Under the revised CSRD, the expected transition from limited assurance to reasonable assurance is no longer anticipated. Since ETS currently requires reasonable assurance, which involves a more rigorous audit process, this could lead to a shift toward limited assurance in order to reduce the reporting burden on companies and promote consistency with other standards. Additionally, updates to CBAM aimed at preventing circumvention may result in increased enforcement and stricter penalties for inaccurate reporting. The reduced scope of both the CSRD and CSDDD may also limit the availability of data needed to support and refine environmental policies such as the ETS.
-
-Sources:
-Guidance Document The Monitoring and Reporting Regulation - General guidance for installations. (2025). Available at: https://climate.ec.europa.eu/document/download/d4f11230-9126-41a8-8c42-6131cd4e742e_en?filename=gd1_guidance_installations_en.pdf [Accessed 17 Jun. 2025].

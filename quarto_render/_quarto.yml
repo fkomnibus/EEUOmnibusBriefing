@@ -33,7 +33,7 @@ format:
   html:
     embed-resources: true
     theme:
-      - Flatly
+      - Yeti
     css: styles.css
     toc: true
     

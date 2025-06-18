@@ -1,0 +1,6 @@
+---
+format: html
+jupyter: python3
+---
+
+![](bibheader.png){fig-align="center"}
