@@ -7,6 +7,9 @@ website:
   repo-url: https://github.com/clairembassett/EEUOmnibus.git
   repo-branch: master
 
+  sidebar:
+    search: true
+
   navbar:
     search: true
     left:
@@ -30,27 +33,21 @@ website:
             text: EU Taxonomy
           - href: propcbam.qmd
             text: CBAM
-      - href: clientapplication.qmd
-        text: Client Application
-      - href: secaffects.qmd
-        text: Secondary Affects to ETS
+      - text: Client Application
+        menu:
+          - href: clientapplication.qmd
+            text: Client A
+      - href: seceffects.qmd
+        text: Secondary Effects to ETS
       - href: cbamcalc.qmd
         text: CBAM Calculator
       - href: sources.qmd
         text: Bibliography
 
-
 format:
   html:
     embed-resources: true
     theme:
-      - Flatly
+      - flatly
     css: styles.css
     toc: true
-    
-
-
-    
-
-
-

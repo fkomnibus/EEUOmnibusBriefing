@@ -5,6 +5,7 @@ jupyter: python3
 
 ![](propchangesheader.png){fig-align="center"}
 
+This will later be split in to the tabs
 **Corporate Sustainability Reporting Directive(CSRD):** Recent proposed amendments to the CSRD aim to narrow the scope of the directive by concentrating reporting obligations on larger undertakings. This adjustment is intended to alleviate the administrative burden on Small and Medium-sized Enterprises (SMEs), ensuring that sustainability reporting remains impactful without disproportionately affecting smaller businesses. It is estimated the 80% entities currently in scope of the directive will be exempted.
 
 ![](CSRDproposed.png){fig-align="center"}
