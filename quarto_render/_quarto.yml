@@ -26,6 +26,8 @@ website:
         text: Client Application
       - href: secaffects.qmd
         text: Secondary Affects to ETS
+      - href: sources.qmd
+        text: Bibliography
 
 format:
   html:
