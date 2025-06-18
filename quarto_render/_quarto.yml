@@ -9,9 +9,9 @@ website:
 
   sidebar:
     search: true
-
-  navbar:
-    left:
+    style: "floating"
+    collapse-level: 1
+    contents:
       - href: index.qmd
         text: Introduction
       - href: purpose.qmd
