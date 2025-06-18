@@ -7,11 +7,9 @@ website:
   repo-url: https://github.com/clairembassett/EEUOmnibus.git
   repo-branch: master
 
-  sidebar:
+  navbar:
     search: true
-    style: "floating"
-    collapse-level: 1
-    contents:
+    left:
       - href: index.qmd
         text: Introduction
       - href: purpose.qmd
@@ -20,8 +18,18 @@ website:
         text: Key Terms
       - href: approvedchanges.qmd
         text: Approved Changes
-      - href: proposedchanges.qmd
-        text: Proposed Changes
+      - text: Proposed Changes
+        menu:
+          - href: proposedchanges.qmd
+            text: Overview
+          - href: propcsrd.qmd
+            text: CSRD
+          - href: propcsddd.qmd
+            text: CSDDD
+          - href: propeutax.qmd
+            text: EU Taxonomy
+          - href: propcbam.qmd
+            text: CBAM
       - href: clientapplication.qmd
         text: Client Application
       - href: secaffects.qmd
@@ -30,6 +38,7 @@ website:
         text: CBAM Calculator
       - href: sources.qmd
         text: Bibliography
+
 
 format:
   html:
