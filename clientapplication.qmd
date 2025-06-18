@@ -4,7 +4,6 @@ format: html
 jupyter: python3
 ---
 
-# Client A Case Study
 A past client only referred to as Company A will be used as a case study on how the EU Omnibus package may effect current and future clients. The non-EU company does not fall within the scope of the Carbon Border Adjustment Mechanism(CBAM) due to industry scope, either in its original form or proposed changes, and will therefore be excluded from its application.
 
 ## Published Company Statistics in 2024:

@@ -12,8 +12,8 @@ website:
 
   navbar:
     left:
-     # - href: index.qmd
-     #   text: Home
+      - href: index.qmd
+        text: Introduction
       - href: purpose.qmd
         text: Purpose
       - href: keyterms.qmd
@@ -31,8 +31,7 @@ format:
   html:
     embed-resources: true
     theme:
-      - cosmo
-      - brand
+      - Flatly
     css: styles.css
     toc: true
     
