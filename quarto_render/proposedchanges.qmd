@@ -15,4 +15,6 @@ jupyter: python3
 
 ![](CS3Dproposed.png){fig-align="center"}
 
+
+
 **EU Taxonomy:** The proposed changes to the EU Taxonomy aim to reduce administrative burdens. Under current legislation, all companies within the CSRD scope are automatically subject to Taxonomy requirements, including full compliance with technical screening criteria. The proposal narrows the scope to the largest companies under CSDDD, introduces partial compliance, and allows CSRD companies below CSDDD thresholds to voluntarily opt-in for reporting.

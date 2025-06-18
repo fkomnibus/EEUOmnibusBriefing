@@ -26,6 +26,8 @@ website:
         text: Client Application
       - href: secaffects.qmd
         text: Secondary Affects to ETS
+      - href: cbamcalc.qmd
+        text: CBAM Calculator
       - href: sources.qmd
         text: Bibliography
 
