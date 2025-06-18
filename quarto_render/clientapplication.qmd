@@ -5,10 +5,35 @@ jupyter: python3
 
 ![](ClientAppheader.png){fig-align="center"}
 
+# Client A Case Study
+
 A past client only referred to as Company A will be used as a case study on how the EU Omnibus package may effect current and future clients. The non-EU company does not fall within the scope of the Carbon Border Adjustment Mechanism(CBAM) due to industry scope, either in its original form or proposed changes, and will therefore be excluded from its application.
 
 ## Published Company Statistics in 2024:
-![](coAstats.png){fig-align="center"}
+<table class="table table-bordered" style="background-color: white; color: #021e45;">
+  <thead>
+    <tr>
+      <th scope="col">Company Overview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Number of Employees: 3,723</td>
+    </tr>
+    <tr>
+      <td>Net Turnover: €870.82 Million</td>
+    </tr>
+    <tr>
+      <td>EU Net Turnover: €297.84 Million</td>
+    </tr>
+    <tr>
+      <td>Total Assets: €1,100 Million</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+*All monetary values were converted from U.S. dollars to euros using the 2024 average exchange rate of 0.924(IRS, 2024) and then slightly altered for anonymity.
+
 
 ## Application of Case Study to the “Stop the Clock” Proposal:
 Approved Changes to the CSRD:

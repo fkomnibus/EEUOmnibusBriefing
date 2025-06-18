@@ -4,3 +4,15 @@ jupyter: python3
 ---
 
 ![](bibheader.png){fig-align="center"}
+
+The EU Corporate Sustainability Due Diligence Directive – Which companies are in scope and when will they have to comply? [online] Available at: https://www.cliffordchance.com/insights/resources/blogs/business-and-human-rights-insights/2025/01/the-eu-corporate-sustainability-due-diligence-directive.html [Accessed 3 Jun. 2025].eur-lex.europa.eu. (n.d.). 
+
+EUR-Lex - SME - EN - EUR-Lex. [online] Available at: https://eur-lex.europa.eu/EN/legal-content/glossary/small-and-medium-sized-enterprises.html [Accessed 3 Jun. 2025].Europa.eu. (2025). Directive - EU - 2025/794 - EN - EUR-Lex. [online] Available at: https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32025L0794 [Accessed 3 Jun. 2025].Ey.com. (2025). 
+
+EU’s Omnibus Proposal: Key changes to the CSRD, CS3D and Taxonomy. [online] Available at: https://www.ey.com/en_be/technical/tax/tax-alerts/2025/eus-omnibus-proposal-key-changes-to-the-csrd-cs3d-and-taxonomy [Accessed 16 Jun. 2025].
+
+Guidance Document The Monitoring and Reporting Regulation - General guidance for installations. (2025). Available at: https://climate.ec.europa.eu/document/download/d4f11230-9126-41a8-8c42-6131cd4e742e_en?filename=gd1_guidance_installations_en.pdf [Accessed 17 Jun. 2025].IRS (2024). 
+
+Yearly Average Currency Exchange Rates | Internal Revenue Service. [online] Irs.gov. Available at: https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates [Accessed 11 Jun. 2025].Sidley.com. (2025). 
+
+EU Omnibus Package: Key Changes Proposed by the Commission on the Carbon Border Adjustment Mechanism. [online] Available at: https://www.sidley.com/en/insights/newsupdates/2025/03/eu-omnibus-package-key-changes-proposed-by-the-commission-on-the-carbon-border-adjustment-mechanism [Accessed 10 Jun. 2025].
