@@ -4735,10 +4735,6 @@ vertical-align: -.125em;
 <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./purpose.html"> 
-<span class="menu-text">Purpose</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./keyterms.html"> 
 <span class="menu-text">Key Terms</span></a>
   </li>  
@@ -4779,18 +4775,18 @@ vertical-align: -.125em;
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-client-application">    
         <li>
-    <a class="dropdown-item" href="./clientapplication.html">
+    <a class="dropdown-item" href="./clientaapp.html">
  <span class="dropdown-text">Client A</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./clientbapp.html">
+ <span class="dropdown-text">Client B</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./seceffects.html"> 
 <span class="menu-text">Secondary Effects to ETS</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./cbamcalc.html"> 
-<span class="menu-text">CBAM Calculator</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./sources.html"> 
@@ -4828,8 +4824,14 @@ vertical-align: -.125em;
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#interactive-cbam-calculator" id="toc-interactive-cbam-calculator" class="nav-link active" data-scroll-target="#interactive-cbam-calculator">Interactive CBAM Calculator</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -4837,8 +4839,25 @@ vertical-align: -.125em;
 
 
 
+<section id="interactive-cbam-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-cbam-calculator">Interactive CBAM Calculator</h3>
+<div>
+<label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br> <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br> <label>CBAM Price (€/tCO₂e): <input type="number" id="price" value="90"></label><br> <button onclick="calculateCBAM()">Calculate</button>
+<p id="result">
+</p>
+</div>
+<script>
+  function calculateCBAM() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const ef = parseFloat(document.getElementById('ef').value);
+    const price = parseFloat(document.getElementById('price').value);
+    const total = weight * ef * price;
+    document.getElementById('result').innerText = `Total CBAM Certificate Cost: €${total.toFixed(2)}`;
+  }
+</script>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

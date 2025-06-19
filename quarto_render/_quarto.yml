@@ -15,8 +15,6 @@ website:
     left:
       - href: index.qmd
         text: Introduction
-      - href: purpose.qmd
-        text: Purpose
       - href: keyterms.qmd
         text: Key Terms
       - href: approvedchanges.qmd
@@ -35,12 +33,12 @@ website:
             text: CBAM
       - text: Client Application
         menu:
-          - href: clientapplication.qmd
+          - href: clientaapp.qmd
             text: Client A
+          - href: clientbapp.qmd
+            text: Client B
       - href: seceffects.qmd
         text: Secondary Effects to ETS
-      - href: cbamcalc.qmd
-        text: CBAM Calculator
       - href: sources.qmd
         text: Bibliography
 

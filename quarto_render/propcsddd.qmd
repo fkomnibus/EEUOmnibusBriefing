@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two Column Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+    </tr>
+    <tr>
+      <td>Data Row 1, Col 1</td>
+      <td>Data Row 1, Col 2</td>
+    </tr>
+    <tr>
+      <td>Data Row 2, Col 1</td>
+      <td>Data Row 2, Col 2</td>
+    </tr>
+  </table>
+
+</body>
+</html>
