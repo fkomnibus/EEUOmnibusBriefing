@@ -37,6 +37,8 @@ website:
             text: Client B
       - href: seceffects.qmd
         text: Secondary Effects to ETS
+      - href: lawtracker.qmd
+        text: EU Law Tracker
       - href: sources.qmd
         text: Bibliography
 
