@@ -1,3 +1,13 @@
+---
+format: html
+jupyter: python3
+---
+
+![](propchangesheader.png){fig-align="center"}
+
+**Carbon Border Adjustment Mechanism(CBAM):** The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions.
+
+![](CS3Dproposed.png){fig-align="center"}
 
 ### Interactive CBAM Calculator
 

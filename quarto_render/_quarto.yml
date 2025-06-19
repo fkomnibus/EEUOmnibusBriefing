@@ -21,8 +21,6 @@ website:
         text: Approved Changes
       - text: Proposed Changes
         menu:
-          - href: proposedchanges.qmd
-            text: Overview
           - href: propcsrd.qmd
             text: CSRD
           - href: propcsddd.qmd
