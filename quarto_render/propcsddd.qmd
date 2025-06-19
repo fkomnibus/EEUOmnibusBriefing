@@ -2,35 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Two Column Table</title>
+  <title>Proposed Effects of EU Omnibus Package</title>
   <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f9f9f9;
     }
-    td, th {
-      border: 1px solid #999;
-      padding: 8px;
+    .table {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 1em;
+      vertical-align: top;
       text-align: left;
+    }
+    .table th {
+      background-color: #002060;
+      color: white;
+      font-size: 1.1em;
+    }
+    .table td.title {
+      background-color: #d9e1f2;
+      font-weight: bold;
+      width: 25%;
+    }
+    .table td.content {
+      background-color: #f2f2f2;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.2em;
     }
   </style>
 </head>
 <body>
-
-  <table>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-    </tr>
-    <tr>
-      <td>Data Row 1, Col 1</td>
-      <td>Data Row 1, Col 2</td>
-    </tr>
-    <tr>
-      <td>Data Row 2, Col 1</td>
-      <td>Data Row 2, Col 2</td>
-    </tr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="2">Proposed Effects of EU Omnibus Package on Standards Set by the CSDDD (2024/1760)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="title">Harmonization</td>
+        <td class="content">
+          <ul>
+            <li>Expanded harmonization of due diligence rules across the EU, especially for impact identification, remediation, and complaints mechanisms.</li>
+            <li>Member States can still go beyond in areas like labor law, where EU competence is limited.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Stakeholder Definition</td>
+        <td class="content">
+          <ul>
+            <li>Stakeholders now limited to:</li>
+            <li>Workers and their representatives</li>
+            <li>Individuals and communities directly affected by a company or its direct business partners.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Focus on Direct Business Partners</td>
+        <td class="content">
+          <ul>
+            <li>Due diligence is now limited to direct business partners, unless credible evidence suggests harm deeper in the value chain.</li>
+            <li>Indirect partners only investigated under specific conditions (complaints, known past harm, media reports, etc.).</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Mandatory Termination of Relationships</td>
+        <td class="content">
+          <ul>
+            <li>Termination is no longer mandatory even when there is evidence of serious harm.</li>
+            <li>Companies may instead suspend the relationship and attempt remediation.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Less Frequent Monitoring</td>
+        <td class="content">
+          <ul>
+            <li>Companies now required to assess due diligence effectiveness every five years (instead of every year), unless urgent issues arise.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
   </table>
-
 </body>
 </html>
