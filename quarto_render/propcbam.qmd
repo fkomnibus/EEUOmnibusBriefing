@@ -9,7 +9,7 @@ jupyter: python3
 
 ![](CS3Dproposed.png){fig-align="center"}
 
-### Interactive CBAM Calculator
+### CBAM Carbon Credit Calculator
 
 ```{=html}
 <div>
