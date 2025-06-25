@@ -117,9 +117,12 @@ df1['yearweek_date'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].asty
 df2['quarter_start'] = pd.to_datetime(df2['year'].astype(str) + '-' + (3 * df2['quarter'] - 2).astype(str).str.zfill(2) + '-01')
 
 # Create interactive figure
+import plotly.graph_objects as go
+
+# Your df1 and df2 should be defined above this point
+
 fig = go.Figure()
 
-# Light blue for weekly
 fig.add_trace(go.Scatter(
     x=df1['yearweek_date'],
     y=df1['Weekly Avg Auction Price €/tCO2'],
@@ -129,7 +132,6 @@ fig.add_trace(go.Scatter(
     hovertemplate='Week: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
 ))
 
-# Dark blue for quarterly
 fig.add_trace(go.Scatter(
     x=df2['quarter_start'],
     y=df2['Auction Price €/tCO2quarteravg'],
@@ -139,13 +141,15 @@ fig.add_trace(go.Scatter(
     hovertemplate='Quarter Start: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
 ))
 
-# Layout
 fig.update_layout(
     title='Weekly vs. Quarterly Auction Price Averages',
     title_font=dict(color='darkblue'),
     yaxis_title='Auction Price €/tCO2',
-    xaxis=dict(tickfont=dict(color='darkblue'),
-        title_font=dict(color='darkblue'),tickformat='%Y-%m'),
+    xaxis=dict(
+        tickfont=dict(color='darkblue'),
+        title_font=dict(color='darkblue'),
+        tickformat='%Y-%m'
+    ),
     hovermode='x unified',
     yaxis=dict(
         tickfont=dict(color='darkblue'),
@@ -155,55 +159,61 @@ fig.update_layout(
     template='plotly_white'
 )
 
-fig.show()
-
 fig.write_html("interactive_graph.html", include_plotlyjs='cdn', full_html=False, div_id='graph')
-
 ```
 
 ```{=html}
-<!-- This injects the graph into your page -->
-<div id="graph-container">
+<div id="graph">
   {{< include interactive_graph.html >}}
 </div>
+
+
 
 ### CBAM Carbon Credit Calculator
 ```{=html}
 <div>
   <label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
-  <label>CBAM Price (€/tCO₂e): <input type="number" id="price" value="90"></label><br>
+  <label>Weekly CBAM Price (€/tCO₂e): <input type="number" id="price_weekly" value="0" step="0.1"></label><br>
+  <label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
   <button onclick="calculateCBAM()">Calculate</button>
   <p id="result"></p>
-<label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
 </div>
 
-<script>
-  function calculateCBAM() {
-    const weight = parseFloat(document.getElementById('weight').value);
-    const ef = parseFloat(document.getElementById('ef').value);
-    const price = parseFloat(document.getElementById('price').value);
-    const total = weight * ef * price;
-    document.getElementById('result').innerText = `Total CBAM Certificate Cost: €${total.toFixed(2)}`;
-  }
-</script>
 
 ```{=html}
 <script>
-  // Listen for clicks on the Plotly chart
-  document.getElementById('graph').on('plotly_click', function(data) {
-    const price = data.points[0].y;
-    const traceName = data.points[0].data.name;
+  function calculateCBAM() {
+    const weight = parseFloat(document.getElementById('weight').value) || 0;
+    const ef = parseFloat(document.getElementById('ef').value) || 0;
 
-    // Fill the appropriate field
-    if (traceName.includes("Weekly")) {
-      document.getElementById('price_weekly').value = price.toFixed(2);
-    } else if (traceName.includes("Quarterly")) {
-      document.getElementById('price_quarterly').value = price.toFixed(2);
+    const price_weekly = parseFloat(document.getElementById('price_weekly').value) || 0;
+    const price_quarterly = parseFloat(document.getElementById('price_quarterly').value) || 0;
+    const price = price_weekly || price_quarterly;
+
+    const total = weight * ef * price;
+    document.getElementById('result').innerText = `Total CBAM Certificate Cost: €${total.toFixed(2)}`;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const graphDiv = document.getElementById('graph');
+    if (graphDiv && graphDiv.on) {
+      graphDiv.on('plotly_click', function(data) {
+        const price = data.points[0].y;
+        const traceName = data.points[0].data.name;
+
+        if (traceName.includes("Weekly")) {
+          document.getElementById('price_weekly').value = price.toFixed(2);
+        } else if (traceName.includes("Quarterly")) {
+          document.getElementById('price_quarterly').value = price.toFixed(2);
+        }
+
+        calculateCBAM();
+      });
     }
-
-    // Optionally trigger the calculator if emissions are already filled
-    calculateCBAM();
   });
 </script>
-```
+
+
+
+
