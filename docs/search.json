@@ -65,16 +65,16 @@
   {
     "objectID": "propcbam.html",
     "href": "propcbam.html",
-    "title": "CBAM Carbon Credit Calculator",
+    "title": "EU Omnibus Briefing",
     "section": "",
     "text": "Carbon Border Adjustment Mechanism(CBAM): The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions."
   },
   {
     "objectID": "propcbam.html#comparing-different-calculation-methods",
     "href": "propcbam.html#comparing-different-calculation-methods",
-    "title": "CBAM Carbon Credit Calculator",
+    "title": "EU Omnibus Briefing",
     "section": "Comparing Different Calculation Methods",
-    "text": "Comparing Different Calculation Methods\n\n\n/Users/clairebassett/Library/Python/3.9/lib/python/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning:\n\nWorkbook contains no default style, apply openpyxl's default\n\n/Users/clairebassett/Library/Python/3.9/lib/python/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning:\n\nWorkbook contains no default style, apply openpyxl's default\n\n/Users/clairebassett/Library/Python/3.9/lib/python/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning:\n\nWorkbook contains no default style, apply openpyxl's default\n\n/Users/clairebassett/Library/Python/3.9/lib/python/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning:\n\nWorkbook contains no default style, apply openpyxl's default\n\n/Users/clairebassett/Library/Python/3.9/lib/python/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning:\n\nWorkbook contains no default style, apply openpyxl's default\n\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n                            \n                                            \n\n\n\nWeight (tonnes):  Emission Factor (tCO₂e/tonne):  CBAM Price (€/tCO₂e):  Calculate"
+    "text": "Comparing Different Calculation Methods\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n                        \n                                            \n\n\n\n### CBAM Carbon Credit Calculator\n```{=html}\n\n  Weight (tonnes): \n  Emission Factor (tCO₂e/tonne): \n  CBAM Price (€/tCO₂e): \n  Calculate\n  \nQuarterly CBAM Price (€/tCO₂e): \n\n\n\n\n```{=html}"
   },
   {
     "objectID": "propcsrd.html",

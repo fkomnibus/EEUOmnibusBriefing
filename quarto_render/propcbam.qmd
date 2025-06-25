@@ -15,6 +15,8 @@ jupyter: python3
 
 ## Comparing Different Calculation Methods 
 ```{python}
+import warnings
+warnings.filterwarnings("ignore", message="Workbook contains no default style.*")
 import pandas as pd
 import os
 import numpy as np
@@ -107,53 +109,6 @@ df2.head(1000)
 df1['yearweek_date'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].astype(str) + '1', format='%G%V%u')
 df2['quarter_start'] = pd.to_datetime(df2['year'].astype(str) + '-' + (3 * df2['quarter'] - 2).astype(str).str.zfill(2) + '-01')
 
-
-import pandas as pd
-import plotly.graph_objects as go
-
-# Assuming you have 'df1' with weekly data and 'df2' with quarterly data
-
-# Convert week and quarter info to actual dates
-df1['yearweek_date'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].astype(str) + '1', format='%G%V%u')
-df2['quarter_start'] = pd.to_datetime(df2['year'].astype(str) + '-' + (3 * df2['quarter'] - 2).astype(str).str.zfill(2) + '-01')
-
-# Create the interactive figure
-fig = go.Figure()
-
-# Add weekly average line
-fig.add_trace(go.Scatter(
-    x=df1['yearweek_date'],
-    y=df1['Weekly Avg Auction Price €/tCO2'],
-    mode='lines+markers',
-    name='Weekly Average',
-    line=dict(color='blue'),
-    hovertemplate='Week: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
-))
-
-# Add quarterly average step line
-fig.add_trace(go.Scatter(
-    x=df2['quarter_start'],
-    y=df2['Auction Price €/tCO2quarteravg'],
-    mode='lines+markers',
-    name='Quarterly Average',
-    line=dict(shape='hv', color='orange'),
-    hovertemplate='Quarter Start: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
-))
-
-# Layout settings
-fig.update_layout(
-    title='Comparing Weekly v. Quarterly Auction Prices',
-    xaxis_title='Date',
-    yaxis_title='Auction Price €/tCO2',
-    xaxis=dict(tickformat='%Y-%m'),
-    hovermode='x unified',
-    legend=dict(x=0.01, y=0.99),
-    template='plotly_white'
-)
-
-fig.show()
-
-
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -202,8 +157,15 @@ fig.update_layout(
 
 fig.show()
 
+fig.write_html("interactive_graph.html", include_plotlyjs='cdn', full_html=False, div_id='graph')
+
 ```
 
+```{=html}
+<!-- This injects the graph into your page -->
+<div id="graph-container">
+  {{< include interactive_graph.html >}}
+</div>
 
 ### CBAM Carbon Credit Calculator
 ```{=html}
@@ -213,6 +175,7 @@ fig.show()
   <label>CBAM Price (€/tCO₂e): <input type="number" id="price" value="90"></label><br>
   <button onclick="calculateCBAM()">Calculate</button>
   <p id="result"></p>
+<label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
 </div>
 
 <script>
@@ -225,4 +188,22 @@ fig.show()
   }
 </script>
 
+```{=html}
+<script>
+  // Listen for clicks on the Plotly chart
+  document.getElementById('graph').on('plotly_click', function(data) {
+    const price = data.points[0].y;
+    const traceName = data.points[0].data.name;
 
+    // Fill the appropriate field
+    if (traceName.includes("Weekly")) {
+      document.getElementById('price_weekly').value = price.toFixed(2);
+    } else if (traceName.includes("Quarterly")) {
+      document.getElementById('price_quarterly').value = price.toFixed(2);
+    }
+
+    // Optionally trigger the calculator if emissions are already filled
+    calculateCBAM();
+  });
+</script>
+```
