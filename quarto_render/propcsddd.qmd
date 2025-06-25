@@ -70,7 +70,7 @@ jupyter: python3
         <td class="title">Stakeholder Definition</td>
         <td class="content">
           <ul>
-            <li>Stakeholders now limited to:</li>
+            Stakeholders now limited to:</li>
             <li>Workers and their representatives</li>
             <li>Individuals and communities directly affected by a company or its direct business partners.</li>
           </ul>

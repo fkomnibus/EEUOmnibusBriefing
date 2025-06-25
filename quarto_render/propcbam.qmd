@@ -9,8 +9,60 @@ jupyter: python3
 
 ![](CS3Dproposed.png){fig-align="center"}
 
-### CBAM Carbon Credit Calculator
+## Comparing Different Calculation Methods 
+```{python}
+import pandas as pd
+import os
+import re
 
+# Define path to your folder of Excel files
+path = "../data"
+
+# List to hold (year, DataFrame) pairs
+yearly_dfs = []
+
+# Regex to extract year from filename
+year_pattern = re.compile(r'(\d{4})')
+
+# Loop through files in the folder
+for file in os.listdir(path):
+    if file.endswith(".xlsx"):
+        match = year_pattern.search(file)
+        if match:
+            year = int(match.group(1))
+            filepath = os.path.join(path, file)
+            df = pd.read_excel(filepath)
+            df['year'] = year  # Optionally add a 'year' column to the data
+            yearly_dfs.append((year, df))
+
+# Sort by year and combine into a single DataFrame
+yearly_dfs.sort(key=lambda x: x[0])  # Sort by year
+df_merged = pd.concat([df for _, df in yearly_dfs], ignore_index=True)
+
+# Save to Excel
+df_merged.to_excel("merged_cbam_data.xlsx", index=False)
+
+```
+```{python}
+import pandas as pd
+import os
+
+path = "../data"
+
+dataframes = []
+
+for file in os.listdir(path):
+    if file.endswith(".xlsx"):
+        filepath = os.path.join(path, file)
+        df = pd.read_excel(filepath)
+        dataframes.append(df)
+
+df1 = pd.concat(dataframes, ignore_index=True)
+
+df1.to_excel("df1.xlsx", index=False)
+```
+
+### CBAM Carbon Credit Calculator
 ```{=html}
 <div>
   <label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br>
