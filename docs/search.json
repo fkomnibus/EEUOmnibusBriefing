@@ -79,16 +79,16 @@
   {
     "objectID": "propcbam.html",
     "href": "propcbam.html",
-    "title": "CBAM Carbon Credit Calculator",
+    "title": "CBAM Carbon Credits Historical Price Comparison",
     "section": "",
     "text": "Carbon Border Adjustment Mechanism(CBAM): The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions."
   },
   {
-    "objectID": "propcbam.html#comparing-different-calculation-methods",
-    "href": "propcbam.html#comparing-different-calculation-methods",
-    "title": "CBAM Carbon Credit Calculator",
-    "section": "Comparing Different Calculation Methods",
-    "text": "Comparing Different Calculation Methods\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\nWeight (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
+    "objectID": "propcbam.html#comparing-eu-ets-allowance-closing-prices-based-on-weekly-v.-quarterly-averages",
+    "href": "propcbam.html#comparing-eu-ets-allowance-closing-prices-based-on-weekly-v.-quarterly-averages",
+    "title": "CBAM Carbon Credits Historical Price Comparison",
+    "section": "Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages",
+    "text": "Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\nWeight (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
   },
   {
     "objectID": "proposedchanges.html",
@@ -137,7 +137,7 @@
     "href": "propeutax.html",
     "title": "EU Omnibus Briefing",
     "section": "",
-    "text": "EU Taxonomy: The proposed changes to the EU Taxonomy aim to reduce administrative burdens. Under current legislation, all companies within the CSRD scope are automatically subject to Taxonomy requirements, including full compliance with technical screening criteria. The proposal narrows the scope to the largest companies under CSDDD, introduces partial compliance, and allows CSRD companies below CSDDD thresholds to voluntarily opt-in for reporting."
+    "text": "EU Taxonomy: The proposed changes to the EU Taxonomy aim to reduce administrative burdens. Under current legislation, all companies within the CSRD scope are automatically subject to Taxonomy requirements, including full compliance with technical screening criteria. The proposal narrows the scope to the largest companies under CSDDD, introduces partial compliance, and allows CSRD companies below CSDDD thresholds to voluntarily opt-in for reporting. The reporting guidelines and process remains unchanged. Below is the EU Taxonomy Reporting Process for clients either required to report or voluntarily reporting."
   },
   {
     "objectID": "keyterms.html",
