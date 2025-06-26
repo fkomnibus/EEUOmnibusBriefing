@@ -159,13 +159,8 @@ fig.update_layout(
     template='plotly_white'
 )
 
-fig.write_html("interactive_graph.html", include_plotlyjs='cdn', full_html=False, div_id='graph')
+fig.show()
 ```
-
-```{=html}
-<div id="graph">
-  {{< include interactive_graph.html >}}
-</div>
 
 
 
@@ -174,44 +169,20 @@ fig.write_html("interactive_graph.html", include_plotlyjs='cdn', full_html=False
 <div>
   <label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
-  <label>Weekly CBAM Price (€/tCO₂e): <input type="number" id="price_weekly" value="0" step="0.1"></label><br>
-  <label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
+  <label>CBAM Price (€/tCO₂e): <input type="number" id="price" value="90"></label><br>
   <button onclick="calculateCBAM()">Calculate</button>
   <p id="result"></p>
+<label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
 </div>
 
-
-```{=html}
 <script>
   function calculateCBAM() {
-    const weight = parseFloat(document.getElementById('weight').value) || 0;
-    const ef = parseFloat(document.getElementById('ef').value) || 0;
-
-    const price_weekly = parseFloat(document.getElementById('price_weekly').value) || 0;
-    const price_quarterly = parseFloat(document.getElementById('price_quarterly').value) || 0;
-    const price = price_weekly || price_quarterly;
-
+    const weight = parseFloat(document.getElementById('weight').value);
+    const ef = parseFloat(document.getElementById('ef').value);
+    const price = parseFloat(document.getElementById('price').value);
     const total = weight * ef * price;
     document.getElementById('result').innerText = `Total CBAM Certificate Cost: €${total.toFixed(2)}`;
   }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const graphDiv = document.getElementById('graph');
-    if (graphDiv && graphDiv.on) {
-      graphDiv.on('plotly_click', function(data) {
-        const price = data.points[0].y;
-        const traceName = data.points[0].data.name;
-
-        if (traceName.includes("Weekly")) {
-          document.getElementById('price_weekly').value = price.toFixed(2);
-        } else if (traceName.includes("Quarterly")) {
-          document.getElementById('price_quarterly').value = price.toFixed(2);
-        }
-
-        calculateCBAM();
-      });
-    }
-  });
 </script>
 
 
