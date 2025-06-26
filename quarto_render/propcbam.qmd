@@ -169,19 +169,22 @@ fig.show()
 <div>
   <label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
-  <label>CBAM Price (€/tCO₂e): <input type="number" id="price" value="90"></label><br>
+  <label>Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="Weekly Price" value="90"></label><br>
+  <label>Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="Quarterly Price" value="90"></label><br>
   <button onclick="calculateCBAM()">Calculate</button>
   <p id="result"></p>
-<label>Quarterly CBAM Price (€/tCO₂e): <input type="number" id="price_quarterly" value="0" step="0.1"></label><br>
 </div>
 
 <script>
   function calculateCBAM() {
     const weight = parseFloat(document.getElementById('weight').value);
     const ef = parseFloat(document.getElementById('ef').value);
-    const price = parseFloat(document.getElementById('price').value);
-    const total = weight * ef * price;
-    document.getElementById('result').innerText = `Total CBAM Certificate Cost: €${total.toFixed(2)}`;
+    const quartprice = parseFloat(document.getElementById('Quarterly Price').value);
+    const weekprice = parseFloat(document.getElementById('Weekly Price').value);
+    const total = weight * ef * weekprice;
+    document.getElementById('result').innerText = `Total CBAM Certificate Cost based on Weekly EU ETS Allowance Closing Prices: €${total.toFixed(2)}`;
+    const total = weight * ef * quartprice;
+    document.getElementById('result').innerText = `Total CBAM Certificate Cost based on Quarterly EU ETS Allowance Closing Prices: €${total.toFixed(2)}`;
   }
 </script>
 
