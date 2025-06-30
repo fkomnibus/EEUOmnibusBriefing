@@ -11,7 +11,7 @@ jupyter: python3
 
 **Carbon Border Adjustment Mechanism(CBAM):** The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions.
 
-![](CS3Dproposed.png){fig-align="center"}
+![](CBAMgraphic.png){fig-align="center"}
 
 ## Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages 
 ```{python}
@@ -164,10 +164,10 @@ fig.show()
 
 
 
-### CBAM Carbon Credits Historical Price Comparison
+### Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations
 ```{=html}
 <div>
-  <label>Weight (tonnes): <input type="number" id="weight" value="50"></label><br>
+  <label>Weight of Emissions(tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
   <label>Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="WeeklyPrice" value="90"></label><br>
   <label>Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="QuarterlyPrice" value="90"></label><br>
@@ -189,9 +189,9 @@ fig.show()
     const totalQuarterly = intQuarterly * quarterlyPrice;
 
     document.getElementById('result_weekly').innerText =
-      `Carbon Certificate Estimate: €${totalWeekly.toFixed(2)} (based on EU ETS Allowances Weekly Average Closing Prices)`;
+      `Carbon Certificate Price based on **Weekly** EU ETS Allowance Closing Price Averages: €${totalWeekly.toFixed(2)}';
 
     document.getElementById('result_quarterly').innerText =
-      `Quarterly Estimate: €${totalQuarterly.toFixed(2)} (based on EU ETS Allowance Quarterly Average Closing Prices)`;
-  }
+      `Carbon Certificate Price based on Quarterly EU ETS Allowance Closing Price Averages: €${totalQuarterly.toFixed(2)}`;
+      }
 </script>

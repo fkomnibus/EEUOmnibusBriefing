@@ -11,4 +11,9 @@ jupyter: python3
 
 **Carbon Border Adjust Mechanism(CBAM):** A policy initiative adopted by the EU on 10 May 2023 aimed at preventing carbon leakage and promoting fair, sustainable trade. It imposes a carbon charge on certain imports from countries with generally less stringent climate policies, ensuring that imported goods meet environmental standards comparable to those within the EU.
 
-**EU Taxonomy:** Adopted on June 18, 2020, this framework was developed by the European Union to establish a classification system for environmentally sustainable economic activities. Its primary purpose is to direct investments toward initiatives that align with the EU's climate and environmental goals, particularly the ambition of achieving climate neutrality by 2050. By providing sector-specific guidelines, the taxonomy helps investors, companies, and policymakers make well-informed, sustainable choices.
+**EU Taxonomy:** Adopted on June 18, 2020, this framework was developed by the European Union to establish a classification system for environmentally sustainable economic activities. Its primary purpose is to direct investments toward initiatives that align with the EU's climate and environmental goals, particularly the ambition of achieving climate neutrality by 2050. By providing sector-specific guidelines, the taxonomy helps investors, companies, and policymakers make well-informed, sustainable choices. These are the current steps for companies to report under EU Taxonomy.
+![](eutaxprocess.png){fig-align="center"}
+
+Undertakings must also work to align with six environmental objectives
+
+![](EUTaxComp.png){fig-align="center"}
