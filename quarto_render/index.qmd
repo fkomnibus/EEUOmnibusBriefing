@@ -13,77 +13,111 @@ The Omnibus Package marks one of the first legislative steps toward reducing reg
 
 Against this backdrop, this report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments.
 
+---
+title: "EU Environmental Legislation"
+format: html
+page-layout: full
+---
 
-
-Click each title below to learn more about the legislation.
 <style>
-.accordion-button {
-  background-color: #021e45; /* Deep navy blue */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #5fc8db, #0456c1);
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
   color: white;
-  padding: 1em 1.5em;
-  margin: 8px 0;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 20px 0;
+  border-bottom: 2px solid white;
+}
+
+.accordion-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.accordion {
+  background: transparent;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2em;
+  border-bottom: 5px solid #021e45;
+  position: relative;
 }
 
-.accordion-button:hover {
-  background-color: #03285b; /* Slightly lighter hover shade */
-  transform: scale(1.01);
+.accordion::after {
+  content: "▼";
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
 }
 
-.accordion-content {
+.accordion.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.panel {
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.2);
   display: none;
-  padding: 1em 1.5em;
-  margin-bottom: 8px;
-  background-color: #f4f6f9;
-  border-left: 4px solid #021e45;
-  border-radius: 0 0 8px 8px;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.active + .accordion-content {
-  display: block;
+  overflow: hidden;
+  color: white;
+  font-weight: normal;
 }
 </style>
 
-<button class="accordion-button" onclick="toggleAccordion(this)">CSRD – Corporate Sustainability Reporting Directive</button>
-<div class="accordion-content">
-  The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
-</div>
+# EU ENVIRONMENTAL LEGISLATION
 
-<button class="accordion-button" onclick="toggleAccordion(this)">CSDDD – Corporate Sustainability Due Diligence Directive</button>
-<div class="accordion-content">
-  The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
-</div>
+<div class="accordion-container">
+  <button class="accordion">Corporate Sustainability Due Diligence Directive</button>
+  <div class="panel">
+    <p>This directive requires companies to identify, prevent, and mitigate adverse human rights and environmental impacts in their operations and value chains.</p>
+  </div>
 
-<button class="accordion-button" onclick="toggleAccordion(this)">CBAM – Carbon Border Adjustment Mechanism</button>
-<div class="accordion-content">
-  The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
-</div>
+  <button class="accordion">Corporate Sustainability Reporting Directive</button>
+  <div class="panel">
+    <p>The CSRD expands sustainability reporting obligations, ensuring companies disclose environmental, social, and governance (ESG) risks and impacts.</p>
+  </div>
 
-<button class="accordion-button" onclick="toggleAccordion(this)">EU Taxonomy – Sustainable Finance Classification System</button>
-<div class="accordion-content">
-  The EU Taxonomy defines which economic activities are environmentally sustainable, guiding investments and disclosures.
+  <button class="accordion">EU Taxonomy</button>
+  <div class="panel">
+    <p>The EU Taxonomy is a classification system defining environmentally sustainable economic activities, helping investors and companies align with the EU Green Deal.</p>
+  </div>
+
+  <button class="accordion">Carbon Border Adjustment Mechanism</button>
+  <div class="panel">
+    <p>CBAM is a carbon tariff on carbon-intensive imports into the EU to prevent carbon leakage and encourage cleaner industrial practices globally.</p>
+  </div>
 </div>
 
 <script>
-function toggleAccordion(button) {
-  const currentlyActive = document.querySelector('.accordion-button.active');
-  if (currentlyActive && currentlyActive !== button) {
-    currentlyActive.classList.remove('active');
-    currentlyActive.nextElementSibling.style.display = 'none';
-  }
-
-  button.classList.toggle('active');
-  const content = button.nextElementSibling;
-  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
+
