@@ -13,83 +13,68 @@ The Omnibus Package marks one of the first legislative steps toward reducing reg
 
 Against this backdrop, this report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>EU Policy Brief</title>
-  <style>
-    .accordion-button {
-      background-color: #eee;
-      padding: 1em;
-      cursor: pointer;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
-    }
 
-    .accordion-button:hover {
-      background-color: #ccc;
-    }
 
-    .accordion-content {
-      display: none;
-      padding: 0.5em 1em;
-      border-top: 1px solid #ccc;
-    }
+Click each title below to learn more about the legislation.
 
-    .active + .accordion-content {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <h1>EU Policy Brief</h1>
-  <p>Click each title below to learn more about the legislation.</p>
+<style>
+.accordion-button {
+  background-color: #eee;
+  padding: 1em;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
 
-  <div class="accordion-item">
-    <button class="accordion-button" onclick="toggleAccordion(this)">CSRD – Corporate Sustainability Reporting Directive</button>
-    <div class="accordion-content">
-      The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
-    </div>
-  </div>
+.accordion-button:hover {
+  background-color: #ccc;
+}
 
-  <div class="accordion-item">
-    <button class="accordion-button" onclick="toggleAccordion(this)">CSDDD – Corporate Sustainability Due Diligence Directive</button>
-    <div class="accordion-content">
-      The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
-    </div>
-  </div>
+.accordion-content {
+  display: none;
+  padding: 0.5em 1em;
+  border-top: 1px solid #ccc;
+}
 
-  <div class="accordion-item">
-    <button class="accordion-button" onclick="toggleAccordion(this)">CBAM – Carbon Border Adjustment Mechanism</button>
-    <div class="accordion-content">
-      The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
-    </div>
-  </div>
+.active + .accordion-content {
+  display: block;
+}
+</style>
 
-  <div class="accordion-item">
-    <button class="accordion-button" onclick="toggleAccordion(this)">EU Taxonomy – Sustainable Finance Classification System</button>
-    <div class="accordion-content">
-      The EU Taxonomy is a classification system that defines which economic activities are considered environmentally sustainable, guiding investments and disclosures.
-    </div>
-  </div>
+<button class="accordion-button" onclick="toggleAccordion(this)">CSRD – Corporate Sustainability Reporting Directive</button>
+<div class="accordion-content">
+  The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
+</div>
 
-  <script>
-    function toggleAccordion(button) {
-      const currentlyActive = document.querySelector('.accordion-button.active');
-      if (currentlyActive && currentlyActive !== button) {
-        currentlyActive.classList.remove('active');
-        currentlyActive.nextElementSibling.style.display = 'none';
-      }
+<button class="accordion-button" onclick="toggleAccordion(this)">CSDDD – Corporate Sustainability Due Diligence Directive</button>
+<div class="accordion-content">
+  The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
+</div>
 
-      button.classList.toggle('active');
-      const content = button.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-</body>
-</html>
+<button class="accordion-button" onclick="toggleAccordion(this)">CBAM – Carbon Border Adjustment Mechanism</button>
+<div class="accordion-content">
+  The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
+</div>
+
+<button class="accordion-button" onclick="toggleAccordion(this)">EU Taxonomy – Sustainable Finance Classification System</button>
+<div class="accordion-content">
+  The EU Taxonomy defines which economic activities are environmentally sustainable, guiding investments and disclosures.
+</div>
+
+<script>
+function toggleAccordion(button) {
+  const currentlyActive = document.querySelector('.accordion-button.active');
+  if (currentlyActive && currentlyActive !== button) {
+    currentlyActive.classList.remove('active');
+    currentlyActive.nextElementSibling.style.display = 'none';
+  }
+
+  button.classList.toggle('active');
+  const content = button.nextElementSibling;
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
