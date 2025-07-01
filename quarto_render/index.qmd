@@ -16,69 +16,6 @@ Against this backdrop, this report presents a comprehensive analysis of the EU O
 
 
 Click each title below to learn more about the legislation.
-
-<style>
-.accordion-button {
-  background-color: #eee;
-  padding: 1em;
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1.1em;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-button:hover {
-  background-color: #ccc;
-}
-
-.accordion-content {
-  display: none;
-  padding: 0.5em 1em;
-  border-top: 1px solid #ccc;
-}
-
-.active + .accordion-content {
-  display: block;
-}
-</style>
-
-<button class="accordion-button" onclick="toggleAccordion(this)">CSRD – Corporate Sustainability Reporting Directive</button>
-<div class="accordion-content">
-  The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
-</div>
-
-<button class="accordion-button" onclick="toggleAccordion(this)">CSDDD – Corporate Sustainability Due Diligence Directive</button>
-<div class="accordion-content">
-  The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
-</div>
-
-<button class="accordion-button" onclick="toggleAccordion(this)">CBAM – Carbon Border Adjustment Mechanism</button>
-<div class="accordion-content">
-  The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
-</div>
-
-<button class="accordion-button" onclick="toggleAccordion(this)">EU Taxonomy – Sustainable Finance Classification System</button>
-<div class="accordion-content">
-  The EU Taxonomy defines which economic activities are environmentally sustainable, guiding investments and disclosures.
-</div>
-
-<script>
-function toggleAccordion(button) {
-  const currentlyActive = document.querySelector('.accordion-button.active');
-  if (currentlyActive && currentlyActive !== button) {
-    currentlyActive.classList.remove('active');
-    currentlyActive.nextElementSibling.style.display = 'none';
-  }
-
-  button.classList.toggle('active');
-  const content = button.nextElementSibling;
-  content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
-</script>
-
 <style>
 .accordion-button {
   background-color: #021e45; /* Deep navy blue */
