@@ -1,3 +1,12 @@
+---
+title: "Introduction"
+format: html
+toc: false
+html:
+  embed-resources: true
+  theme: default
+---
+
 ![](EUHeader.png){fig-align="center"}
 
 The Omnibus Package marks one of the first legislative steps toward reducing regulatory burdens within the EU. In the Budapest Declaration on the New European Competitiveness Deal, EU Heads of State and Government called for a “simplification revolution” aimed at creating a clear, streamlined, and business-friendly regulatory framework, with a particular focus on easing administrative, regulatory, and reporting burdens for SMEs. This initiative is driven by the broader goal of enhancing the competitiveness and resilience of EU businesses amid rapid global change and ongoing uncertainty linked to the Russia-Ukraine war.
