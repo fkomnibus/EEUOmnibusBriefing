@@ -3,3 +3,101 @@
 The Omnibus Package marks one of the first legislative steps toward reducing regulatory burdens within the EU. In the Budapest Declaration on the New European Competitiveness Deal, EU Heads of State and Government called for a “simplification revolution” aimed at creating a clear, streamlined, and business-friendly regulatory framework, with a particular focus on easing administrative, regulatory, and reporting burdens for SMEs. This initiative is driven by the broader goal of enhancing the competitiveness and resilience of EU businesses amid rapid global change and ongoing uncertainty linked to the Russia-Ukraine war.
 
 Against this backdrop, this report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EU Policy Brief</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #021e45;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid #021e45;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #021e45;
+    }
+    .accordion-button {
+      background-color: #021e45;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .accordion-button:hover {
+      background-color: #032a65;
+    }
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background-color: #eef1f7;
+      color: #021e45;
+    }
+    .accordion-content.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>EU Policy Brief</h1>
+    <p>Click each title below to learn more about the legislation.</p>
+
+    <div class="accordion-item">
+      <button class="accordion-button" onclick="toggleAccordion(this)">CSRD – Corporate Sustainability Reporting Directive</button>
+      <div class="accordion-content">
+        The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button" onclick="toggleAccordion(this)">CSDDD – Corporate Sustainability Due Diligence Directive</button>
+      <div class="accordion-content">
+        The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button" onclick="toggleAccordion(this)">CBAM – Carbon Border Adjustment Mechanism</button>
+      <div class="accordion-content">
+        The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button" onclick="toggleAccordion(this)">EU Taxonomy – Sustainable Finance Classification System</button>
+      <div class="accordion-content">
+        The EU Taxonomy is a classification system that defines which economic activities are considered environmentally sustainable, guiding investments and disclosures.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      content.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
