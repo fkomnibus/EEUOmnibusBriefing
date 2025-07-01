@@ -4854,21 +4854,13 @@ background-color: #f9f9f9;
 color: #021e45;
 padding: 2rem;
 }
-.container {
-max-width: 700px;
-margin: auto;
-background: white;
-padding: 2rem;
-border-radius: 12px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-border: 1px solid #021e45;
-}
 h1 {
 text-align: center;
 margin-bottom: 1rem;
 }
 .accordion-item {
 border-bottom: 1px solid #021e45;
+margin-bottom: 0.5rem;
 }
 .accordion-button {
 background-color: #021e45;
@@ -4891,6 +4883,7 @@ display: none;
 padding: 1rem;
 background-color: #eef1f7;
 color: #021e45;
+border-left: 4px solid #021e45;
 }
 .accordion-content.show {
 display: block;
@@ -4898,36 +4891,34 @@ display: block;
 </style>
 
 
-<div class="container">
-<pre><code>&lt;h1&gt;EU Policy Brief&lt;/h1&gt;
-&lt;p&gt;Click each title below to learn more about the legislation.&lt;/p&gt;
-
-&lt;div class=&quot;accordion-item&quot;&gt;
-  &lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CSRD – Corporate Sustainability Reporting Directive&lt;/button&gt;
-  &lt;div class=&quot;accordion-content&quot;&gt;
-    The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;accordion-item&quot;&gt;
-  &lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CSDDD – Corporate Sustainability Due Diligence Directive&lt;/button&gt;
-  &lt;div class=&quot;accordion-content&quot;&gt;
-    The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;accordion-item&quot;&gt;
-  &lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CBAM – Carbon Border Adjustment Mechanism&lt;/button&gt;
-  &lt;div class=&quot;accordion-content&quot;&gt;
-    The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;accordion-item&quot;&gt;
-  &lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;EU Taxonomy – Sustainable Finance Classification System&lt;/button&gt;
-  &lt;div class=&quot;accordion-content&quot;&gt;
-    The EU Taxonomy is a classification system that defines which economic activities are considered environmentally sustainable, guiding investments and disclosures.
-  &lt;/div&gt;
+<h1>
+EU Policy Brief
+</h1>
+<p>
+Click each title below to learn more about the legislation.
+</p>
+<div class="accordion-item">
+<pre><code>&lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CSRD – Corporate Sustainability Reporting Directive&lt;/button&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+  The CSRD expands sustainability reporting requirements for large companies in the EU, requiring detailed disclosures aligned with the European Sustainability Reporting Standards (ESRS).
+&lt;/div&gt;</code></pre>
+</div>
+<div class="accordion-item">
+<pre><code>&lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CSDDD – Corporate Sustainability Due Diligence Directive&lt;/button&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+  The CSDDD introduces obligations for companies to conduct due diligence on human rights and environmental impacts throughout their value chains.
+&lt;/div&gt;</code></pre>
+</div>
+<div class="accordion-item">
+<pre><code>&lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;CBAM – Carbon Border Adjustment Mechanism&lt;/button&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+  The CBAM imposes a carbon price on imports of carbon-intensive goods, ensuring fair competition and encouraging decarbonization globally.
+&lt;/div&gt;</code></pre>
+</div>
+<div class="accordion-item">
+<pre><code>&lt;button class=&quot;accordion-button&quot; onclick=&quot;toggleAccordion(this)&quot;&gt;EU Taxonomy – Sustainable Finance Classification System&lt;/button&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+  The EU Taxonomy is a classification system that defines which economic activities are considered environmentally sustainable, guiding investments and disclosures.
 &lt;/div&gt;</code></pre>
 </div>
 <script>
