@@ -13,26 +13,20 @@ The Omnibus Package marks one of the first legislative steps toward reducing reg
 
 Against this backdrop, this report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments.
 
----
-title: "EU Environmental Legislation"
-format: html
-page-layout: full
----
-
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #5fc8db, #0456c1);
-  color: #000;
+  background: white;
+  color: #021e45;
   margin: 0;
   padding: 0;
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: #021e45;
   padding: 20px 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #021e45;
 }
 
 .accordion-container {
@@ -42,7 +36,7 @@ h1 {
 
 .accordion {
   background: transparent;
-  color: black;
+  color: #021e45;
   font-weight: bold;
   cursor: pointer;
   padding: 20px;
@@ -58,7 +52,7 @@ h1 {
 .accordion::after {
   content: "▼";
   font-size: 1em;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(2, 30, 69, 0.6);
   position: absolute;
   right: 20px;
   transition: transform 0.3s ease;
@@ -69,20 +63,20 @@ h1 {
 }
 
 .accordion:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(2, 30, 69, 0.05);
 }
 
 .panel {
   padding: 0 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(2, 30, 69, 0.05);
   display: none;
   overflow: hidden;
-  color: white;
+  color: #021e45;
   font-weight: normal;
 }
 </style>
 
-# EU ENVIRONMENTAL LEGISLATION
+<h1>EU ENVIRONMENTAL LEGISLATION</h1>
 
 <div class="accordion-container">
   <button class="accordion">Corporate Sustainability Due Diligence Directive</button>
@@ -120,4 +114,3 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 </script>
-
