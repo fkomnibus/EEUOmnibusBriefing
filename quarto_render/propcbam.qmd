@@ -1,4 +1,5 @@
 ---
+title: ""
 format:
   html:
     code-tools: false
@@ -165,9 +166,10 @@ fig.show()
 
 
 ### Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations
+### Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations
 ```{=html}
 <div>
-  <label>Weight of Emissions(tonnes): <input type="number" id="weight" value="50"></label><br>
+  <label>Weight of Emissions (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
   <label>Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="WeeklyPrice" value="90"></label><br>
   <label>Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="QuarterlyPrice" value="90"></label><br>
@@ -185,13 +187,14 @@ fig.show()
 
     const intWeekly = weight * ef;
     const totalWeekly = intWeekly * weeklyPrice;
+
     const intQuarterly = weight * ef;
     const totalQuarterly = intQuarterly * quarterlyPrice;
 
     document.getElementById('result_weekly').innerText =
-      `Carbon Certificate Price based on **Weekly** EU ETS Allowance Closing Price Averages: €${totalWeekly.toFixed(2)}';
+      `Carbon Certificate Price based on Weekly EU ETS Allowance Closing Price Averages: €${totalWeekly.toFixed(2)}`;
 
     document.getElementById('result_quarterly').innerText =
       `Carbon Certificate Price based on Quarterly EU ETS Allowance Closing Price Averages: €${totalQuarterly.toFixed(2)}`;
-      }
+  }
 </script>

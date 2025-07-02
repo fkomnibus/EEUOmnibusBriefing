@@ -5,104 +5,167 @@ format: html
 
 Coming soon.
 
-::: {.accordion-container}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EU ETS Price Calculator with Interactive Plot</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #021e45;
+    }
+    h1 {
+      color: #021e45;
+    }
+    #calculator {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px solid #021e45;
+      border-radius: 8px;
+      max-width: 350px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type=number] {
+      width: 100%;
+      padding: 5px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 15px;
+      background-color: #0456c1;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #034a9e;
+    }
+    p.result {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #021e45;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Section 1 -->
-<button class="accordion">Corporate Sustainability Reporting Directive</button>
-<div class="panel">
-  <p>An EU directive adopted on 28 November 2022, which revises several existing directives and regulations, including the Accounting Directive, Transparency Directive, Audit Directive, and Audit Regulation. The CSRD aims to improve the quality, consistency, and comparability of sustainability information disclosed by companies. Its primary goal is to provide investors and stakeholders with reliable data to assess and manage sustainability-related risks, especially those arising from climate change and social/environmental impacts. It also enforces double materiality, meaning companies must report both on how sustainability issues affect them and how their operations impact society and the environment.</p>
-</div>
+  <h1>Weekly vs. Quarterly Auction Price Averages</h1>
+  <div id="myPlot" style="width: 100%; max-width: 900px; height: 500px;"></div>
 
-<!-- Section 2 -->
-<button class="accordion">Corporate Sustainability Due Diligence Directive</button>
-<div class="panel">
-  <p>An EU directive adopted on 24 April 2024, which requires certain large EU and non-EU companies to identify, prevent, mitigate, and account for adverse human rights and environmental impacts in their operations, subsidiaries, and value chains. The CSDDD introduces due diligence obligations, encouraging responsible business conduct throughout the supply chain, and includes provisions for climate transition planning aligned with the Paris Agreement.</p>
-</div>
+  <div id="calculator">
+    <h2>Carbon Credit Price Calculator</h2>
+    <label for="weight">Weight of Emissions (tonnes):</label>
+    <input type="number" id="weight" value="50" min="0" step="any" />
 
-<!-- Section 3 -->
-<button class="accordion">EU Taxonomy</button>
-<div class="panel panel-scroll">
-  <p>Adopted on June 18, 2020, this framework was developed by the European Union to establish a classification system for environmentally sustainable economic activities. Its primary purpose is to direct investments toward initiatives that align with the EU's climate and environmental goals, particularly the ambition of achieving climate neutrality by 2050. By providing sector-specific guidelines, the taxonomy helps investors, companies, and policymakers make well-informed, sustainable choices. These are the current steps for companies to report under EU Taxonomy.</p>
+    <label for="ef">Emission Factor (tCO₂e/tonne):</label>
+    <input type="number" id="ef" value="2.3" step="0.1" min="0" />
 
-  <img src="eutaxprocess.png" alt="Reporting Steps" style="display: block; margin: 20px auto; max-width: 100%;">
+    <label for="WeeklyPrice">Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):</label>
+    <input type="number" id="WeeklyPrice" value="90" step="0.01" min="0" />
 
-  <p>Undertakings must also work to align with six environmental objectives:</p>
+    <label for="QuarterlyPrice">Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):</label>
+    <input type="number" id="QuarterlyPrice" value="90" step="0.01" min="0" />
 
-  <img src="EUTaxComp.png" alt="Environmental Objectives Chart" style="display: block; margin: 20px auto; max-width: 100%;">
-</div>
+    <button onclick="calculateCBAM()">Calculate</button>
 
-<!-- Section 4 -->
-<button class="accordion">Carbon Border Adjustment Mechanism</button>
-<div class="panel">
-  <p>A policy initiative adopted by the EU on 10 May 2023 aimed at preventing carbon leakage and promoting fair, sustainable trade. It imposes a carbon charge on certain imports from countries with generally less stringent climate policies, ensuring that imported goods meet environmental standards comparable to those within the EU.</p>
-</div>
-
-:::
-
-<style>
-.accordion-container {
-  width: 90%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.accordion {
-  background: transparent;
-  color: #021e45;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 20px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1.2em;
-  border-bottom: 5px solid #021e45;
-  position: relative;
-}
-
-.accordion::after {
-  content: "▼";
-  position: absolute;
-  right: 20px;
-  transition: transform 0.3s ease;
-}
-
-.accordion.active::after {
-  transform: rotate(180deg);
-}
-
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background-color: rgba(2, 30, 69, 0.05);
-  padding: 0 20px;
-  color: #021e45;
-}
-
-.panel.open {
-  max-height: 1000px;
-  padding-bottom: 20px;
-}
-
-.panel-scroll.open {
-  max-height: 600px;
-  overflow-y: auto;
-  padding-bottom: 20px;
-  scrollbar-width: thin;
-  scrollbar-color: #888 #eee;
-}
-</style>
+    <p id="result_weekly" class="result"></p>
+    <p id="result_quarterly" class="result"></p>
+  </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const accordions = document.querySelectorAll(".accordion");
-  accordions.forEach((accordion) => {
-    accordion.addEventListener("click", () => {
-      accordion.classList.toggle("active");
-      const panel = accordion.nextElementSibling;
-      panel.classList.toggle("open");
-    });
+  // Dummy data for demonstration - replace these arrays with your real processed data!
+  const weeklyDates = [
+    '2023-01-02', '2023-01-09', '2023-01-16', '2023-01-23', '2023-01-30',
+    '2023-02-06', '2023-02-13', '2023-02-20'
+  ];
+  const weeklyPrices = [85, 88, 87, 90, 92, 91, 89, 90];
+
+  const quarterlyDates = [
+    '2023-01-01', '2023-04-01', '2023-07-01', '2023-10-01'
+  ];
+  const quarterlyPrices = [88, 91, 89, 93];
+
+  // Create the Plotly figure
+  var data = [
+    {
+      x: weeklyDates,
+      y: weeklyPrices,
+      mode: 'lines+markers',
+      name: 'Weekly Average',
+      line: {color: 'lightblue'},
+      marker: {size: 8},
+      hovertemplate: 'Week: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    },
+    {
+      x: quarterlyDates,
+      y: quarterlyPrices,
+      mode: 'lines+markers',
+      name: 'Quarterly Average',
+      line: {shape: 'hv', color: 'darkblue'},
+      marker: {size: 8},
+      hovertemplate: 'Quarter Start: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    }
+  ];
+
+  var layout = {
+    yaxis: {title: 'Auction Price €/tCO₂e', tickfont: {color: 'darkblue'}, titlefont: {color: 'darkblue'}},
+    xaxis: {title: 'Date', tickfont: {color: 'darkblue'}, titlefont: {color: 'darkblue'}, tickformat: '%Y-%m'},
+    hovermode: 'x unified',
+    legend: {x: 0.01, y: 0.99},
+    template: 'plotly_white',
+    title: {text: 'Weekly vs. Quarterly Auction Price Averages', font: {color: 'darkblue'}}
+  };
+
+  Plotly.newPlot('myPlot', data, layout);
+
+  // Handle click on plot points
+  var plotDiv = document.getElementById('myPlot');
+  plotDiv.on('plotly_click', function(eventData) {
+    const point = eventData.points[0];
+    const seriesName = point.data.name;
+    const yValue = point.y;
+
+    if (seriesName === 'Weekly Average') {
+      document.getElementById('WeeklyPrice').value = yValue.toFixed(2);
+    } else if (seriesName === 'Quarterly Average') {
+      document.getElementById('QuarterlyPrice').value = yValue.toFixed(2);
+    }
   });
-});
+
+  // Calculator function
+  function calculateCBAM() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const ef = parseFloat(document.getElementById('ef').value);
+    const weeklyPrice = parseFloat(document.getElementById('WeeklyPrice').value);
+    const quarterlyPrice = parseFloat(document.getElementById('QuarterlyPrice').value);
+
+    if (isNaN(weight) || isNaN(ef) || isNaN(weeklyPrice) || isNaN(quarterlyPrice)) {
+      alert("Please fill in all fields with valid numbers.");
+      return;
+    }
+
+    const totalWeekly = weight * ef * weeklyPrice;
+    const totalQuarterly = weight * ef * quarterlyPrice;
+
+    document.getElementById('result_weekly').innerText =
+      `Carbon Certificate Price based on Weekly EU ETS Allowance Closing Price Averages: €${totalWeekly.toFixed(2)}`;
+
+    document.getElementById('result_quarterly').innerText =
+      `Carbon Certificate Price based on Quarterly EU ETS Allowance Closing Price Averages: €${totalQuarterly.toFixed(2)}`;
+  }
 </script>
+
+</body>
+</html>
+
