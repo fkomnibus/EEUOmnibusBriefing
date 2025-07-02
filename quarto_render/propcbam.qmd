@@ -167,7 +167,9 @@ fig.show()
 
 
 
-### Carbon Allowances Calculator
+## Carbon Allowances Calculator
+
+
 This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system.
 
 ```{=html}
