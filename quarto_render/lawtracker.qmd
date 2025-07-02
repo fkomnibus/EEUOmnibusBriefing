@@ -169,3 +169,236 @@ Coming soon.
 </body>
 </html>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Interactive Carbon Price Calculator</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #021e45; }
+  label { display: block; margin-top: 10px; }
+  input { width: 100%; padding: 6px; font-size: 1rem; }
+  button { margin-top: 15px; padding: 10px 15px; font-size: 1rem; background: #0456c1; color: white; border: none; cursor: pointer; }
+  button:hover { background: #034a9e; }
+  p.result { font-weight: bold; margin-top: 15px; }
+</style>
+</head>
+<body>
+
+<h1>Weekly vs. Quarterly Auction Price Averages</h1>
+<div id="myPlot" style="width: 900px; height: 500px;"></div>
+
+<h2>Carbon Credit Price Calculator</h2>
+<label for="weight">Weight of Emissions (tonnes):</label>
+<input type="number" id="weight" value="50" min="0" step="any" />
+
+<label for="ef">Emission Factor (tCO₂e/tonne):</label>
+<input type="number" id="ef" value="2.3" step="0.1" min="0" />
+
+<label for="WeeklyPrice">Weekly Average Price (€/tCO₂e):</label>
+<input type="number" id="WeeklyPrice" value="90" step="0.01" min="0" />
+
+<label for="QuarterlyPrice">Quarterly Average Price (€/tCO₂e):</label>
+<input type="number" id="QuarterlyPrice" value="90" step="0.01" min="0" />
+
+<button id="calcButton">Calculate</button>
+
+<p id="result_weekly" class="result"></p>
+<p id="result_quarterly" class="result"></p>
+
+<script>
+  // Sample data - replace with your real data
+  const weeklyDates = ['2023-01-02', '2023-01-09', '2023-01-16', '2023-01-23', '2023-01-30'];
+  const weeklyPrices = [85, 88, 87, 90, 92];
+
+  const quarterlyDates = ['2023-01-01', '2023-04-01', '2023-07-01'];
+  const quarterlyPrices = [88, 91, 89];
+
+  // Plotly plot
+  Plotly.newPlot('myPlot', [
+    {
+      x: weeklyDates,
+      y: weeklyPrices,
+      mode: 'lines+markers',
+      name: 'Weekly Average',
+      line: {color: 'lightblue'},
+      marker: {size: 8},
+      hovertemplate: 'Week: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    },
+    {
+      x: quarterlyDates,
+      y: quarterlyPrices,
+      mode: 'lines+markers',
+      name: 'Quarterly Average',
+      line: {shape: 'hv', color: 'darkblue'},
+      marker: {size: 8},
+      hovertemplate: 'Quarter Start: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    }
+  ], {
+    yaxis: {title: 'Auction Price €/tCO₂e'},
+    xaxis: {title: 'Date'},
+    hovermode: 'x unified',
+    template: 'plotly_white',
+    title: {text: 'Weekly vs. Quarterly Auction Price Averages'}
+  });
+
+  // Fill input when user clicks on plot point
+  document.getElementById('myPlot').on('plotly_click', function(eventData) {
+    const point = eventData.points[0];
+    const series = point.data.name;
+    const value = point.y;
+
+    if(series === 'Weekly Average') {
+      document.getElementById('WeeklyPrice').value = value.toFixed(2);
+    }
+    else if(series === 'Quarterly Average') {
+      document.getElementById('QuarterlyPrice').value = value.toFixed(2);
+    }
+  });
+
+  // Calculate function
+  function calculateCBAM() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const ef = parseFloat(document.getElementById('ef').value);
+    const weeklyPrice = parseFloat(document.getElementById('WeeklyPrice').value);
+    const quarterlyPrice = parseFloat(document.getElementById('QuarterlyPrice').value);
+
+    if(isNaN(weight) || isNaN(ef) || isNaN(weeklyPrice) || isNaN(quarterlyPrice)) {
+      alert('Please enter valid numbers in all fields.');
+      return;
+    }
+
+    const totalWeekly = weight * ef * weeklyPrice;
+    const totalQuarterly = weight * ef * quarterlyPrice;
+
+    document.getElementById('result_weekly').textContent = 
+      `Price based on Weekly Average: €${totalWeekly.toFixed(2)}`;
+
+    document.getElementById('result_quarterly').textContent = 
+      `Price based on Quarterly Average: €${totalQuarterly.toFixed(2)}`;
+  }
+
+  // Connect button to function
+  document.getElementById('calcButton').addEventListener('click', calculateCBAM);
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Interactive Carbon Price Calculator</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #021e45; }
+  label { display: block; margin-top: 10px; }
+  input { width: 100%; padding: 6px; font-size: 1rem; }
+  button { margin-top: 15px; padding: 10px 15px; font-size: 1rem; background: #0456c1; color: white; border: none; cursor: pointer; }
+  button:hover { background: #034a9e; }
+  p.result { font-weight: bold; margin-top: 15px; }
+</style>
+</head>
+<body>
+
+<h1>Weekly vs. Quarterly Auction Price Averages</h1>
+<div id="myPlot" style="width: 900px; height: 500px;"></div>
+
+<h2>Carbon Credit Price Calculator</h2>
+<label for="weight">Weight of Emissions (tonnes):</label>
+<input type="number" id="weight" value="50" min="0" step="any" />
+
+<label for="ef">Emission Factor (tCO₂e/tonne):</label>
+<input type="number" id="ef" value="2.3" step="0.1" min="0" />
+
+<label for="WeeklyPrice">Weekly Average Price (€/tCO₂e):</label>
+<input type="number" id="WeeklyPrice" value="90" step="0.01" min="0" />
+
+<label for="QuarterlyPrice">Quarterly Average Price (€/tCO₂e):</label>
+<input type="number" id="QuarterlyPrice" value="90" step="0.01" min="0" />
+
+<button id="calcButton">Calculate</button>
+
+<p id="result_weekly" class="result"></p>
+<p id="result_quarterly" class="result"></p>
+
+<script>
+  // Sample data - replace with your real data arrays from Python
+  const weeklyDates = ['2023-01-02', '2023-01-09', '2023-01-16', '2023-01-23', '2023-01-30'];
+  const weeklyPrices = [85, 88, 87, 90, 92];
+
+  const quarterlyDates = ['2023-01-01', '2023-04-01', '2023-07-01'];
+  const quarterlyPrices = [88, 91, 89];
+
+  // Create Plotly plot
+  Plotly.newPlot('myPlot', [
+    {
+      x: weeklyDates,
+      y: weeklyPrices,
+      mode: 'lines+markers',
+      name: 'Weekly Average',
+      line: {color: 'lightblue'},
+      marker: {size: 8},
+      hovertemplate: 'Week: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    },
+    {
+      x: quarterlyDates,
+      y: quarterlyPrices,
+      mode: 'lines+markers',
+      name: 'Quarterly Average',
+      line: {shape: 'hv', color: 'darkblue'},
+      marker: {size: 8},
+      hovertemplate: 'Quarter Start: %{x}<br>Price: €%{y:.2f}<extra></extra>'
+    }
+  ], {
+    yaxis: {title: 'Auction Price €/tCO₂e'},
+    xaxis: {title: 'Date'},
+    hovermode: 'x unified',
+    template: 'plotly_white',
+    title: {text: 'Weekly vs. Quarterly Auction Price Averages'}
+  });
+
+  // Attach click handler to plot points
+  document.getElementById('myPlot').on('plotly_click', function(eventData) {
+    const point = eventData.points[0];
+    const series = point.data.name;
+    const value = point.y;
+
+    if(series === 'Weekly Average') {
+      document.getElementById('WeeklyPrice').value = value.toFixed(2);
+    } else if(series === 'Quarterly Average') {
+      document.getElementById('QuarterlyPrice').value = value.toFixed(2);
+    }
+  });
+
+  // Calculator function
+  function calculateCBAM() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const ef = parseFloat(document.getElementById('ef').value);
+    const weeklyPrice = parseFloat(document.getElementById('WeeklyPrice').value);
+    const quarterlyPrice = parseFloat(document.getElementById('QuarterlyPrice').value);
+
+    if(isNaN(weight) || isNaN(ef) || isNaN(weeklyPrice) || isNaN(quarterlyPrice)) {
+      alert('Please enter valid numbers in all fields.');
+      return;
+    }
+
+    const totalWeekly = weight * ef * weeklyPrice;
+    const totalQuarterly = weight * ef * quarterlyPrice;
+
+    document.getElementById('result_weekly').textContent =
+      `Price based on Weekly Average: €${totalWeekly.toFixed(2)}`;
+
+    document.getElementById('result_quarterly').textContent =
+      `Price based on Quarterly Average: €${totalQuarterly.toFixed(2)}`;
+  }
+
+  // Connect button click to calculator function
+  document.getElementById('calcButton').addEventListener('click', calculateCBAM);
+</script>
+
+</body>
+</html>
