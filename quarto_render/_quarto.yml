@@ -15,8 +15,6 @@ website:
     left:
       - href: index.qmd
         text: Introduction
-      - href: keyterms.qmd
-        text: Key Terms
       - href: approvedchanges.qmd
         text: Approved Changes
       - text: Proposed Changes
