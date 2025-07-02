@@ -14,6 +14,8 @@ jupyter: python3
 
 ![](CBAMgraphic.png){fig-align="center"}
 
+
+
 ## Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages 
 ```{python}
 import warnings
@@ -165,11 +167,12 @@ fig.show()
 
 
 
-### Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations
-### Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations
+### Carbon Allowances Calculator
+This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system.
+
 ```{=html}
 <div>
-  <label>Weight of Emissions (tonnes): <input type="number" id="weight" value="50"></label><br>
+  <label>Weight of Imports (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
   <label>Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="WeeklyPrice" value="90"></label><br>
   <label>Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e): <input type="number" id="QuarterlyPrice" value="90"></label><br>
@@ -185,11 +188,11 @@ fig.show()
     const weeklyPrice = parseFloat(document.getElementById('WeeklyPrice').value);
     const quarterlyPrice = parseFloat(document.getElementById('QuarterlyPrice').value);
 
-    const intWeekly = weight * ef;
-    const totalWeekly = intWeekly * weeklyPrice;
+    const carbonemissionsw = weight * ef;
+    const totalWeekly = carbonemissionsw * weeklyPrice;
 
-    const intQuarterly = weight * ef;
-    const totalQuarterly = intQuarterly * quarterlyPrice;
+    const carbonemissionsq = weight * ef;
+    const totalQuarterly = carbonemissionsq * quarterlyPrice;
 
     document.getElementById('result_weekly').innerText =
       `Carbon Certificate Price based on Weekly EU ETS Allowance Closing Price Averages: €${totalWeekly.toFixed(2)}`;

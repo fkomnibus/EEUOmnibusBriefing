@@ -65,23 +65,23 @@
   {
     "objectID": "propcbam.html",
     "href": "propcbam.html",
-    "title": "Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations",
+    "title": "Carbon Allowances Calculator",
     "section": "",
     "text": "Carbon Border Adjustment Mechanism(CBAM): The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions."
   },
   {
     "objectID": "propcbam.html#comparing-eu-ets-allowance-closing-prices-based-on-weekly-v.-quarterly-averages",
     "href": "propcbam.html#comparing-eu-ets-allowance-closing-prices-based-on-weekly-v.-quarterly-averages",
-    "title": "Comparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations",
+    "title": "Carbon Allowances Calculator",
     "section": "Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages",
-    "text": "Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\nComparing Historic Carbon Credit Certificate Prices based on Quarterly and Weekly Average Price Calculations\n\nWeight of Emissions (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
+    "text": "Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\nThis calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system.\n\nWeight of Imports (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
   },
   {
     "objectID": "lawtracker.html",
     "href": "lawtracker.html",
     "title": "Law Tracker",
     "section": "",
-    "text": "Coming soon.\n\nimport plotly.graph_objects as go\nimport pandas as pd\n\n# Example data - replace with your processed data\nweekly_dates = ['2023-01-02', '2023-01-09', '2023-01-16']\nweekly_prices = [85, 88, 87]\n\nquarterly_dates = ['2023-01-01', '2023-04-01']\nquarterly_prices = [88, 91]\n\nfig = go.Figure()\n\nfig.add_trace(go.Scatter(\n    x=weekly_dates,\n    y=weekly_prices,\n    mode='lines+markers',\n    name='Weekly Average',\n    line=dict(color='lightblue'),\n    marker=dict(size=8),\n    hovertemplate='Week: %{x}&lt;br&gt;Price: €%{y:.2f}&lt;extra&gt;&lt;/extra&gt;'\n))\n\nfig.add_trace(go.Scatter(\n    x=quarterly_dates,\n    y=quarterly_prices,\n    mode='lines+markers',\n    name='Quarterly Average',\n    line=dict(shape='hv', color='darkblue'),\n    marker=dict(size=8),\n    hovertemplate='Quarter Start: %{x}&lt;br&gt;Price: €%{y:.2f}&lt;extra&gt;&lt;/extra&gt;'\n))\n\nfig.update_layout(\n    yaxis_title='Auction Price €/tCO₂e',\n    xaxis_title='Date',\n    hovermode='x unified',\n    template='plotly_white',\n    title='Weekly vs. Quarterly Auction Price Averages'\n)\n\nfig.show()\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\nCarbon Credit Price Calculator\n\nWeight of Emissions (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average Price (€/tCO₂e):  Quarterly Average Price (€/tCO₂e):  Calculate"
+    "text": "Coming soon."
   },
   {
     "objectID": "propcsrd.html",
