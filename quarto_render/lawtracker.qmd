@@ -1,7 +1,8 @@
 ---
-title: Law Tracker
+title: ""
 format: html
 ---
+![](eulawtrackerheader.png){fig-align="center"}
 
 ## Stop the Clock Proposal(2025/0044) 
 This proposal has already been enacted into law. Its inclusion here serves to ensure consistency and provide timelines of prior decisions.
@@ -12,9 +13,13 @@ This proposal has already been enacted into law. Its inclusion here serves to en
 
 The "Stop the Clock" proposal is the informal name for the legislative initiative that, once adopted, became Directive (EU) 2025/794, which formally amends Directives (EU) 2022/2464 and (EU) 2024/1760 to postpone certain corporate sustainability reporting and due diligence requirements. Below is the official legislation:
 
-```{=html}
-      <iframe width="780" height="500" src="https://eur-lex.europa.eu/eli/dir/2025/794" title="Stop the Clock Law"></iframe>
-```
+<embed
+  data="2025/794.pdf"
+  type="application/pdf"
+  width="100%"
+  height="1000"
+  title="Embedded PDF Viewer"
+/>
 
 ## Proposal to Change the CSRD, CSDDD, and EU Taxonomy(2025/0045)
 
