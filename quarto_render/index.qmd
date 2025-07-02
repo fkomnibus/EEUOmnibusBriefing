@@ -33,7 +33,7 @@ Against this backdrop, this report presents a comprehensive analysis of the EU O
 
   <img src="eutaxprocess.png" alt="Reporting Steps" style="display: block; margin: 20px auto; max-width: 100%;">
 
-  <p>Undertakings must also work to align with six environmental objectives:</p>
+  <p>Companies must align their activities with six environmental objectives and ensure they meet the "Do No Significant Harm" (DNSH) criteria, which means their activities must not significantly harm any of these objectives.</p>
 
   <img src="EUTaxComp.png" alt="Environmental Objectives Chart" style="display: block; margin: 20px auto; max-width: 100%;">
 </div>

@@ -1,6 +1,10 @@
 ---
-title: ""
-format: html
+format:
+  html:
+    code-tools: false
+execute:
+  echo: false
+jupyter: python3
 ---
 ![](eulawtrackerheader.png){fig-align="center"}
 
