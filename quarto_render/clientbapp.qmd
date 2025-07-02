@@ -171,3 +171,11 @@ If the company opts to report under the EU Taxonomy, they will need to provide d
 ```
 
 **Proposed Changes to CBAM:**
+![](CBAMgraphic.png){fig-align="center"}
+
+The proposed changes to CBAM aim to reduce the administrative burden on importers and encourage trade within the EU. Under the revised de minimis exemption, if a company imports fewer than 50 tonnes of goods, CBAM allowances would not apply. However, such a low volume is unlikely given current production levels.
+
+Changes to certificate pricing may slightly affect costs, as tying certificate prices to weekly market rates will align them more closely with actual market conditions. Starting in 2027, companies will only need to surrender certificates covering 50 percent of emissions from imported goods. Additionally, reporting for 2026 imports will not be due until February 2027, giving companies additional time to comply with the new requirements.
+
+The option to hire a third party to submit CBAM declarations may also present a business opportunity. The updated default values will reduce the cost of certificates when emissions data is unavailable, making a lack of emission data less punitive. Emission calculations will now exclude certain finishing processes in the steel industry, which may effect certain products in production. Finally, the new anti-circumvention clause increases exposure for companies attempting to exploit the system and deters efforts to avoid CBAM obligations.
+

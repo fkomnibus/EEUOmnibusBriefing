@@ -9,30 +9,68 @@ jupyter: python3
 
 A past client only referred to as Company A will be used as a case study on how the EU Omnibus package may effect current and future clients. The non-EU company does not fall within the scope of the Carbon Border Adjustment Mechanism(CBAM) due to industry scope, either in its original form or proposed changes, and will therefore be excluded from its application.
 
-## Published Company Statistics in 2024:
-<table class="table table-bordered" style="background-color: white; color: #021e45;">
+## Published Company Statistics in 2024
+
+<style>
+  .table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .table th, .table td {
+    border: 1px solid #ccc;
+    padding: 1em;
+    vertical-align: top;
+    text-align: left;
+  }
+  .table th {
+    background-color: #002060;
+    color: white;
+    font-size: 1.1em;
+  }
+  .table td.title {
+    background-color: #d9e1f2;
+    font-weight: bold;
+    width: 25%;
+  }
+  .table td.content {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<table class="table">
   <thead>
     <tr>
-      <th scope="col">Company Overview</th>
+      <th colspan="2">Company Overview</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Number of Employees: 3,700</td>
+      <td class="title">Number of Employees</td>
+      <td class="content">3,700</td>
     </tr>
     <tr>
-      <td>Net Turnover: €870.8 Million</td>
+      <td class="title">Net Turnover</td>
+      <td class="content">€870.8 Million</td>
     </tr>
     <tr>
-      <td>EU Net Turnover: €300 Million</td>
+      <td class="title">EU Net Turnover</td>
+      <td class="content">€300 Million</td>
     </tr>
     <tr>
-      <td>Total Assets: €500 Million</td>
+      <td class="title">Total Assets</td>
+      <td class="content">€500 Million</td>
     </tr>
-    <tr>
   </tbody>
 </table>
-*All monetary values were converted from U.S. dollars to euros using the 2024 average exchange rate of 0.924(IRS, 2024) and then slightly altered for anonymity.
+
+<p style="font-size: 0.9em; text-align: center; margin-top: 1em;">
+  *All monetary values were converted from U.S. dollars to euros using the 2024 average exchange rate of 0.924 (IRS, 2024) and then slightly altered for anonymity.
+</p>
+
 
 
 ## Application of Case Study to the “Stop the Clock” Proposal:
