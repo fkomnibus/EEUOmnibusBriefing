@@ -16,7 +16,7 @@ The proposed changes to CBAM largely work to lessen the financial and administra
 
 
 
-## Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages 
+## Comparing EU ETS Allowance Closing Prices Based on Weekly v. Quarterly Averages: 
 The graph below compares EU ETS Allowance Closing Prices based on the current quarterly average calculation and the proposed weekly average. It is clear that this proposal would not have a large change in prices, though it would make the costs of carbon certificates more sensitive to market changes. This may lead to more uncertainty when approaching future costs for importers.
 ```{python}
 import warnings
@@ -70,32 +70,37 @@ df1.loc[:, 'week'] = df1['Date'].dt.isocalendar().week
 # Calculating weekly average of Auction Prices and adding it as a new column
 weeklyaverage = df1.groupby(['year', 'week'])['Auction Price €/tCO2'].mean().reset_index()
 
-# Merging Weekly Averages in to original dataframe
+# Merging weekly averages in to original dataframe
 df1 = pd.merge(df1, weeklyaverage, on=['year', 'week'], how='left', suffixes=('', '_weekly_avg'))
 
-# Renaming Weekly Average columns
+# Renaming weekly average columns
 df1.rename(columns={'Auction Price €/tCO2_weekly_avg': 'Weekly Avg Auction Price €/tCO2'}, inplace=True)
 
 # Sorting by year and week to keep chronological order
 df1.sort_values(by=['year', 'week'], inplace=True)
 
+# Combining the year and week columns to one
 df1['yearweek'] = df1['year'].astype(str) + '-W' + df1['week'].astype(str).str.zfill(2)
 df1['yearweek_dt'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].astype(str).str.zfill(2) + '1', format='%G%V%u')
 
-
+# Forcing date to datetime format to allow for manipulation
 df2['Date'] = pd.to_datetime(df2['Date'], errors='coerce')
+
+# Dropping null values to ensure successful data manipulation
 df2.dropna(subset=['Date'], inplace=True)
 
 # Extracting year and week for data manipulation
 df2.loc[:, 'year'] = df2['Date'].dt.isocalendar().year
 df2.loc[:, 'quarter'] = df2['Date'].dt.quarter
 
+# Grouping the year and quarter together to ensure that it calculates the mean of the values correctly
 
 quarteraverage = df2.groupby(['year', 'quarter'])['Auction Price €/tCO2'].mean().reset_index()
 
+# Merging the year and quarter columns to df2
 df2 = pd.merge(df2, quarteraverage, on=['year', 'quarter'], how='left', suffixes=('', 'quarteravg'))
 
-# Renaming Weekly Average columns
+# Renaming weekly average columns
 df2.rename(columns={'Auction Price €/tCO2_x_quarteravg': 'Quarterly Avg Auction Price €/tCO2'}, inplace=True)
 
 
@@ -103,31 +108,24 @@ df2.rename(columns={'Auction Price €/tCO2_x_quarteravg': 'Quarterly Avg Auctio
 df2.sort_values(by=['year', 'quarter'], inplace=True)
 
 df2['yearquarter'] = df2['year'].astype(str) + '-Q' + df2['quarter'].astype(str).str.zfill(2)
+
+# Defining the start of quarters to separate data into respective quarters
 quarter_start_month = {1: 1, 2: 4, 3: 7, 4: 10}
+
+# Mapping the quarter numbers to specific dates
 df2['quarter_start_month'] = df2['quarter'].map(quarter_start_month)
+
 df2['yearquarter_dt'] = pd.to_datetime(df2['year'].astype(str) + '-' + df2['quarter_start_month'].astype(str) + '-01')
-
-df2.head(1000)
-
-
 df1['yearweek_date'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].astype(str) + '1', format='%G%V%u')
 df2['quarter_start'] = pd.to_datetime(df2['year'].astype(str) + '-' + (3 * df2['quarter'] - 2).astype(str).str.zfill(2) + '-01')
 
-import pandas as pd
-import plotly.graph_objects as go
-
-# Date conversion
-df1['yearweek_date'] = pd.to_datetime(df1['year'].astype(str) + df1['week'].astype(str) + '1', format='%G%V%u')
-df2['quarter_start'] = pd.to_datetime(df2['year'].astype(str) + '-' + (3 * df2['quarter'] - 2).astype(str).str.zfill(2) + '-01')
-
-# Create interactive figure
-import plotly.graph_objects as go
-
-# Your df1 and df2 should be defined above this point
+# Imported to create interactive figure
+import plotly.graph_objects as go 
 
 fig = go.Figure()
 
-fig.add_trace(go.Scatter(
+# Plots weekly averages
+fig.add_trace(go.Scatter( 
     x=df1['yearweek_date'],
     y=df1['Weekly Avg Auction Price €/tCO2'],
     mode='lines+markers',
@@ -136,7 +134,8 @@ fig.add_trace(go.Scatter(
     hovertemplate='Week: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
 ))
 
-fig.add_trace(go.Scatter(
+# Plots Quarterly Averages
+fig.add_trace(go.Scatter( 
     x=df2['quarter_start'],
     y=df2['Auction Price €/tCO2quarteravg'],
     mode='lines+markers',
@@ -145,7 +144,18 @@ fig.add_trace(go.Scatter(
     hovertemplate='Quarter Start: %{x|%Y-%m-%d}<br>Price: €%{y:.2f}<extra></extra>'
 ))
 
-fig.update_layout(
+# Adding Source of Dataset
+fig.add_annotation( 
+    text="Source: European Energy Exchange AG (2024) EEX EUA Primary Auction Spot Data. Available at: www.eex.com (Accessed: 8 July 2025)",
+    xref="paper", yref="paper",
+    x=-0.14, y=-0.12,
+    showarrow=False,
+    font=dict(size=7, color="darkblue"),
+    align="left"
+)
+
+# Formatting graph by adding x-axis, y-axis, and a main title
+fig.update_layout( 
     title='Weekly vs. Quarterly Auction Price Averages',
     title_font=dict(color='darkblue'),
     yaxis_title='Auction Price €/tCO2',
@@ -160,7 +170,8 @@ fig.update_layout(
         title_font=dict(color='darkblue')
     ),
     legend=dict(x=0.01, y=0.99),
-    template='plotly_white'
+    template='plotly_white',
+    margin = dict(t=80, b=80, l=60, r=30) 
 )
 
 fig
@@ -169,12 +180,11 @@ fig
 
 ::: {.cbam-calculator}
 
-## CBAM Certificate Cost Calculator
+## CBAM Certificate Cost Calculator:
 
 This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the costs is below:
 
 ![](carbon.png){fig-align="center"}
-
 <div>
   <label>Weight of Imports (tonnes): <input type="number" id="weight" value="50"></label><br>
   <label>Emission Factor (tCO₂e/tonne): <input type="number" id="ef" value="2.3" step="0.1"></label><br>
