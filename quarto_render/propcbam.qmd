@@ -9,7 +9,8 @@ jupyter: python3
 
 ![](propchangesheader.png){fig-align="center"}
 
-**Carbon Border Adjustment Mechanism(CBAM):** The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions.
+## **Carbon Border Adjustment Mechanism(CBAM):** 
+The proposed changes to CBAM largely work to lessen the financial and administrative burden of CBAM certification requirements on importers. The proposal if adopted, would exempt 90% of importers included in CBAM, while covering 99% of total emissions.
 
 ![](CBAMgraphic.png){fig-align="center"}
 
@@ -166,13 +167,13 @@ fig
 ```
 
 
+::: {.cbam-calculator}
 
 ## CBAM Certificate Cost Calculator
 
 This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the costs is below:
 
-<p style="text-align: center;"><strong>CBAM cost = (weight of imports × emissions factor) × EU ETS allowance price (weekly or quarterly average)</strong></p>
-
+![](carbon.png){fig-align="center"}
 
 <div>
   <label>Weight of Imports (tonnes): <input type="number" id="weight" value="50"></label><br>
@@ -204,3 +205,5 @@ This calculator estimates the cost of carbon certificates based on the weight of
       `Carbon Certificate Price based on Quarterly EU ETS Allowance Closing Price Averages: €${totalQuarterly.toFixed(2)}`;
   }
 </script>
+
+:::

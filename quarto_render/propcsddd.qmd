@@ -4,7 +4,8 @@ jupyter: python3
 ---
 ![](propchangesheader.png){fig-align="center"}
 
-**Corporate Sustainability Due Diligence Directive(CSDDD):** Proposals to change the CSDDD do not include changes in scope but rather removing the required reporting from indirect suppliers unless there is a clear indication of harm. This change aims to shield SMEs from what information can be required from suppliers and value chains.
+## **Corporate Sustainability Due Diligence Directive(CSDDD):** 
+Proposals to change the CSDDD do not include changes in scope but rather removing the required reporting from indirect suppliers unless there is a clear indication of harm. This change aims to shield SMEs from what information can be required from suppliers and value chains.
 
 <html lang="en">
 <head>
