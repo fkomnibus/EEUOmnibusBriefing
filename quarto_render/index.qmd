@@ -12,6 +12,8 @@ The Omnibus Package marks one of the first legislative steps toward reducing reg
 
 Against this backdrop, this report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments.
 
+Below is a summary of the key legislations that will be affected by the EU Omnibus Package:
+
 ::: {.accordion-container}
 
 <!-- Section 1 -->
