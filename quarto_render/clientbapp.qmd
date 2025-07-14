@@ -175,7 +175,7 @@ If the company opts to report under the EU Taxonomy, they will need to provide d
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Proposed Effects of EU Omnibus Package on Standards Set by the CBAM (EU 2023/956)</title>
+  <title>Impact of the EU Omnibus Package on CBAM Standards for Client B(EU 2023/956)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -376,7 +376,6 @@ If the company opts to report under the EU Taxonomy, they will need to provide d
 
 </body>
 </html>
-
 
 The proposed changes to CBAM aim to reduce the administrative burden on importers and encourage trade within the EU. Under the revised de minimis exemption, if a company imports fewer than 50 tonnes of goods, CBAM allowances would not apply. However, such a low volume is unlikely given current production levels.
 
