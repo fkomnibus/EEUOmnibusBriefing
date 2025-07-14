@@ -31,7 +31,7 @@ website:
         menu:
           - href: clientaapp.qmd
             text: Client A
-          - href: clientbapp2.qmd
+          - href: clientbapp.qmd
             text: Client B
       - href: seceffects.qmd
         text: Secondary Effects to ETS
