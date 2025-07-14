@@ -171,7 +171,212 @@ If the company opts to report under the EU Taxonomy, they will need to provide d
 ```
 
 **Proposed Changes to CBAM:**
-![](CBAMgraphic.png){fig-align="center"}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposed Effects of EU Omnibus Package on Standards Set by the CBAM (EU 2023/956)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f9f9f9;
+    }
+
+    .table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 1em;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .table th {
+      background-color: #002060;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    .table td.title {
+      background-color: #d9e1f2;
+      font-weight: bold;
+      width: 25%;
+    }
+
+    .table td.current {
+      background-color: #f2f2f2;
+      width: 37.5%;
+    }
+
+    .table td.proposed {
+      background-color: #e2f0d9;
+      width: 37.5%;
+    }
+  </style>
+</head>
+<body>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Current Law</th>
+        <th>Proposed Law</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="title">De Minimus Exceptions</td>
+        <td class="current">
+          <ul>
+            <li> **Value-based exemption** for all industries with shipments of CBAM goods 
+            priced under €150</li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> Quantity-based system applied to importers of steel, aluminum, iron, fertilizers and cement if annual imports remain below 50 tonnes </li>
+            <li> Excludes hydrogen and electricity imports </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Price of CBAM</td>
+        <td class="current">
+          <ul>
+            <li> Price of CBAM certificates based on the quarterly averages of closing prices of the EU ETS allowances </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> From 2027, prices of CBAM certificates based on the weekly average of the closing prices of EU ETS allowances on the auction platform </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">CBAM Certificate Holding Requirements</td>
+        <td class="current">
+          <ul>
+            <li> Importers must hold CBAM certificates equal to 80% of emissions from imported goods at the end of each quarter </li>
+            <li> Additional certificates can be purchased but only up to ⅓ more than the required holding amount </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> From 2027, importers must hold CBAM certificates equal to 50% of emissions from imported goods </li>
+            <li> Companies must purchase only the exact number of certificates needed to meet this requirement. </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Purchasing of CBAM Certificates</td>
+        <td class="current">
+          <ul>
+            <li> Obligation to pay on imported CBAM goods beginning in January 2026 </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> Payment for CBAM certificates covering 2026 imports will be postponed until February 2027 </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">CBAM Declaration Submissions</td>
+        <td class="current">
+          <ul>
+            <li> The deadline for submitting the annual CBAM declaration and surrendering certificates is set for May 31st each year.</li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> The deadline for submitting the annual CBAM declaration and surrendering certificates is set for August 31st each year </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">3rd Party Filing</td>
+        <td class="current">
+          <ul>
+            <li> CBAM declarants are responsible for submitting their own CBAM declarations </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> CBAM declarants may delegate a 3rd party to submit their CBAM declarations </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Change in Default Values</td>
+        <td class="current">
+          <ul>
+            <li> If emission data is unavailable the importers must use the alternative default values which are based on the worst performing EU installations </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> If emission data is unavailable, the average intensity of the 10 highest-emission exporting countries will be used </li>
+            <li> Importers can choose actual or default values, with no verification needed for defaults </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Default Values for 3rd Country Carbon Prices</td>
+        <td class="current">
+          <ul>
+            <li> Imports may only claim deduction based on actual carbon price paid in the 3rd country</li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> The Commission will establish default carbon prices per country </li>
+            <li> Allows deductions for carbon costs incurred in any third country during production, not just the country of origin </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Emission Calculation</td>
+        <td class="current">
+          <ul>
+            <li> All emissions from production processes contribute to CBAM obligations </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> Emission calculations exclude certain emissions including finishing processes for specific steel and aluminum goods </li>
+            <li> Excludes precursors covered by EU ETS or linked carbon pricing systems </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Anticircumvention</td>
+        <td class="current">
+          <ul>
+            <li> General provisions with limited enforcement </li>
+          </ul>
+        </td>
+        <td class="proposed">
+          <ul>
+            <li> Explicit rules against splitting imports and using non genuine arrangements to avoid CBAM obligations </li>
+            <li> National authorities empowered to impose penalties and jointly enforce rules with the commission </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
 
 The proposed changes to CBAM aim to reduce the administrative burden on importers and encourage trade within the EU. Under the revised de minimis exemption, if a company imports fewer than 50 tonnes of goods, CBAM allowances would not apply. However, such a low volume is unlikely given current production levels.
 
