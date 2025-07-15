@@ -5,8 +5,6 @@ jupyter: python3
 
 ![](sources.png){fig-align="center"}
 
-Report prepared by Claire Bassett, July 2025
-
 Accountancy Europe. (2025). Omnibus explained: key changes to CSDDD - Accountancy Europe. [online] Available at: https://accountancyeurope.eu/publications/omnibus-explained-key-changes-to-csddd/ [Accessed 19 Jun. 2025].
 
 Clifford Chance. (2025). The EU Corporate Sustainability Due Diligence Directive – Which companies are in scope and when will they have to comply? [online] Available at: https://www.cliffordchance.com/insights/resources/blogs/business-and-human-rights-insights/2025/01/the-eu-corporate-sustainability-due-diligence-directive.html [Accessed 3 Jun. 2025].
@@ -32,3 +30,6 @@ Jones, S. (2025). Mastering EU Taxonomy Reporting: A Step-by-Step Guide to Compl
 Navigating the EU Omnibus, (2025). [Podcast] Sustainable Connections. 10 Apr.
 
 Sidley.com. (2025). EU Omnibus Package: Key Changes Proposed by the Commission on the Carbon Border Adjustment Mechanism. [online] Available at: https://www.sidley.com/en/insights/newsupdates/2025/03/eu-omnibus-package-key-changes-proposed-by-the-commission-on-the-carbon-border-adjustment-mechanism [Accessed 10 Jun. 2025].
+
+
+Report prepared by Claire Bassett, July 2025
