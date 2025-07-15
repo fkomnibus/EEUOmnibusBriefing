@@ -5,6 +5,8 @@ jupyter: python3
 
 ![](sources.png){fig-align="center"}
 
+Report prepared by Claire Bassett, July 2025
+
 Accountancy Europe. (2025). Omnibus explained: key changes to CSDDD - Accountancy Europe. [online] Available at: https://accountancyeurope.eu/publications/omnibus-explained-key-changes-to-csddd/ [Accessed 19 Jun. 2025].
 
 Clifford Chance. (2025). The EU Corporate Sustainability Due Diligence Directive – Which companies are in scope and when will they have to comply? [online] Available at: https://www.cliffordchance.com/insights/resources/blogs/business-and-human-rights-insights/2025/01/the-eu-corporate-sustainability-due-diligence-directive.html [Accessed 3 Jun. 2025].

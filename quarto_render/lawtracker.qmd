@@ -8,7 +8,7 @@ jupyter: python3
 ---
 ![](eulawtrackerheader.png){fig-align="center"}
 
-## Stop the Clock Proposal(2025/0044) 
+## <a href="https://law-tracker.europa.eu/procedure/2025_44">Stop the Clock Proposal(2025/0044)</a> 
 This proposal has already been enacted into law. Its inclusion here serves to ensure consistency and provide timelines of prior decisions.
 
 ```{=html}
