@@ -38,7 +38,7 @@ website:
       - href: lawtracker.qmd
         text: EU Law Tracker
       - href: sources.qmd
-        text: Bibliography
+        text: Sources
 
 format:
   html:

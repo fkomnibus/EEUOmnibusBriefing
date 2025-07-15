@@ -3,7 +3,7 @@ format: html
 jupyter: python3
 ---
 
-![](bibheader.png){fig-align="center"}
+![](sources.png){fig-align="center"}
 Reference list
 
 Accountancy Europe. (2025). Omnibus explained: key changes to CSDDD - Accountancy Europe. [online] Available at: https://accountancyeurope.eu/publications/omnibus-explained-key-changes-to-csddd/ [Accessed 19 Jun. 2025].
