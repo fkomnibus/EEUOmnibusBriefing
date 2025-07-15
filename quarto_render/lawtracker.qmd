@@ -15,20 +15,20 @@ This proposal has already been enacted into law. Its inclusion here serves to en
       <iframe width="780" height="500" src="https://law-tracker.europa.eu/procedure/2025_44" title="Stop the Clock Proposal"></iframe>
 ```
 
-The "Stop the Clock" proposal is the informal name for the legislative initiative that, once adopted, became Directive (EU) 2025/794, which formally amends Directives (EU) 2022/2464 and (EU) 2024/1760 to postpone certain corporate sustainability reporting and due diligence requirements. Below is the official legislation:
+The "Stop the Clock" proposal is the informal name for the legislative initiative that, once adopted, became Directive (EU) 2025/794, which formally amends Directives (EU) 2022/2464 and (EU) 2024/1760 to postpone certain corporate sustainability reporting and due diligence requirements. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500794">Below is the official legislation.</a>
 
 ```{=html}
       <iframe width="780" height="500" src="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500794" title="Stop the Clock Proposal"></iframe>
 ```
 
 
-## Proposal to Change the CSRD, CSDDD, and EU Taxonomy(2025/0045)
+## <a href="https://law-tracker.europa.eu/procedure/2025_45">Proposal to Change the CSRD, CSDDD, and EU Taxonomy(2025/0045)</a>
 
 ```{=html}
       <iframe width="780" height="500" src="https://law-tracker.europa.eu/procedure/2025_45" title="CSRD and CSDDD Proposal"></iframe>
 ```
 
-## Proposal to Change the Carbon Border Adjustment(2025/0039)
+## <a href="https://law-tracker.europa.eu/procedure/2025_39">Proposal to Change the Carbon Border Adjustment(2025/0039)</a>
 
 ```{=html}
       <iframe width="780" height="500" src="https://law-tracker.europa.eu/procedure/2025_39" title="CBAM Proposal"></iframe>
