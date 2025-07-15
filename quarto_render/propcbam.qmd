@@ -384,7 +384,7 @@ fig
 
 ## CBAM Certificate Cost Calculator:
 
-This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the costs is below:
+This calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the cost is below:
 
 ![](carbon.png){fig-align="center"}
 

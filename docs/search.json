@@ -67,7 +67,7 @@
     "href": "propcbam.html#cbam-certificate-cost-calculator",
     "title": "EU Omnibus Briefing",
     "section": "CBAM Certificate Cost Calculator:",
-    "text": "CBAM Certificate Cost Calculator:\nThis calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the costs is below:\n\n\n\n\n\n\nWeight of Imports (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
+    "text": "CBAM Certificate Cost Calculator:\nThis calculator estimates the cost of carbon certificates based on the weight of imports, emission factor, and EU ETS allowance prices. Use it to compare costs under the previous quarterly average pricing system versus the current weekly average pricing system. The equation to calculate the cost is below:\n\n\n\n\n\n\nWeight of Imports (tonnes):  Emission Factor (tCO₂e/tonne):  Weekly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Quarterly Average of EU ETS Allowance Closing Prices (€/tCO₂e):  Calculate"
   },
   {
     "objectID": "lawtracker.html#stop-the-clock-proposal20250044",
