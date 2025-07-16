@@ -4,7 +4,7 @@ project:
 
 website:
   title: "EU Omnibus Briefing"
-  repo-url: https://github.com/clairembassett/EEUOmnibus.git
+  repo-url: https://github.com/fkomnibus/EEUOmnibusBriefing
   repo-branch: master
 
   sidebar:
