@@ -1,1 +1,3 @@
 # EEUOmnibus
+
+This report presents a comprehensive analysis of the EU Omnibus Package, drawing on detailed research to evaluate the potential impacts on both existing and prospective clients. As the regulatory environment within the European Union continues to evolve at a rapid pace, it is increasingly evident that the ability of clients to successfully navigate this complex and shifting landscape is becoming a crucial concern. The findings outlined here aim to highlight areas of change, anticipate emerging challenges, and help clients respond effectively to upcoming legislative developments. The findings are published as a static website generated with Quarto and deployed via GitHub Pages.
