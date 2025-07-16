@@ -7,7 +7,7 @@ jupyter: python3
 
 # Client B Case Study
 
-A past client only referred to as Company B will be used as a case study on how the EU Omnibus package may effect current and future clients. The EU Net Turnover could not be found, but is likely below the threshold to be affected by the CSDDD. Though, for this application it is assumed to be above 450k to show how the proposed changes may take effect. The UK Steel Company has the below company statistics:
+A past client only referred to as Company B will be used as a case study on how the EU Omnibus package may effect current and future clients. The EU Net Turnover could not be found, but is likely below the threshold to be affected by the CSDDD. Though, for this application it is assumed to be above 450k to show how the proposed changes may take effect. The company is a steel producer located in the UK.
 
 ## Published Company Statistics in 2024:
 <table class="table table-bordered" style="background-color: white; color: #021e45;">

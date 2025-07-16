@@ -112,7 +112,7 @@ The proposed changes to CBAM largely work to lessen the financial and administra
         <td class="proposed">
           <ul>
             <li> From 2027, importers must hold CBAM certificates equal to 50% of emissions from imported goods </li>
-            <li> Companies must purchase only the exact number of certificates needed to meet this requirement. </li>
+            <li> Companies must purchase only the exact number of certificates needed to meet this requirement </li>
           </ul>
         </td>
       </tr>
@@ -133,7 +133,7 @@ The proposed changes to CBAM largely work to lessen the financial and administra
         <td class="title">CBAM Declaration Submissions</td>
         <td class="current">
           <ul>
-            <li> The deadline for submitting the annual CBAM declaration and surrendering certificates is set for May 31st each year.</li>
+            <li> The deadline for submitting the annual CBAM declaration and surrendering certificates is set for May 31st each year </li>
           </ul>
         </td>
         <td class="proposed">

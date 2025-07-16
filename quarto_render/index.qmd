@@ -32,7 +32,7 @@ Below is a summary of the key legislations that will be affected by the EU Omnib
 <!-- Section 3 -->
 <button class="accordion">EU Taxonomy</button>
 <div class="panel panel-scroll">
-  <p>Adopted on June 18, 2020, this framework was developed by the European Union to establish a classification system for environmentally sustainable economic activities. Its primary purpose is to direct investments toward initiatives that align with the EU's climate and environmental goals, particularly the ambition of achieving climate neutrality by 2050. By providing sector-specific guidelines, the taxonomy helps investors, companies, and policymakers make well-informed, sustainable choices. These are the current steps for companies to report under EU Taxonomy.</p>
+  <p>Adopted on 18 June 2020, this framework was developed by the European Union to establish a classification system for environmentally sustainable economic activities. Its primary purpose is to direct investments toward initiatives that align with the EU's climate and environmental goals, particularly the ambition of achieving climate neutrality by 2050. By providing sector-specific guidelines, the taxonomy helps investors, companies, and policymakers make well-informed, sustainable choices. These are the current steps for companies to report under EU Taxonomy.</p>
 
   <img src="eutaxprocess.png" alt="Reporting Steps" style="display: block; margin: 20px auto; max-width: 100%;">
 

@@ -62,8 +62,8 @@ Proposals to change the CSDDD do not include changes in scope but rather removin
         <td class="title">Harmonization</td>
         <td class="content">
           <ul>
-            <li>Expanded harmonization of due diligence rules across the EU, especially for impact identification, remediation, and complaints mechanisms.</li>
-            <li>Member States can still go beyond in areas like labor law, where EU competence is limited.</li>
+            <li>Expanded harmonization of due diligence rules across the EU, especially for impact identification, remediation, and complaints mechanisms</li>
+            <li>Member States can still go beyond in areas like labor law, where EU competence is limited</li>
           </ul>
         </td>
       </tr>
@@ -73,7 +73,7 @@ Proposals to change the CSDDD do not include changes in scope but rather removin
           <ul>
             Stakeholders now limited to:</li>
             <li>Workers and their representatives</li>
-            <li>Individuals and communities directly affected by a company or its direct business partners.</li>
+            <li>Individuals and communities directly affected by a company or its direct business partners</li>
           </ul>
         </td>
       </tr>
@@ -81,8 +81,8 @@ Proposals to change the CSDDD do not include changes in scope but rather removin
         <td class="title">Focus on Direct Business Partners</td>
         <td class="content">
           <ul>
-            <li>Due diligence is now limited to direct business partners, unless credible evidence suggests harm deeper in the value chain.</li>
-            <li>Indirect partners only investigated under specific conditions (complaints, known past harm, media reports, etc.).</li>
+            <li>Due diligence is now limited to direct business partners, unless credible evidence suggests harm deeper in the value chain</li>
+            <li>Indirect partners only investigated under specific conditions (complaints, known past harm, media reports, etc.)</li>
           </ul>
         </td>
       </tr>
@@ -90,8 +90,8 @@ Proposals to change the CSDDD do not include changes in scope but rather removin
         <td class="title">Mandatory Termination of Relationships</td>
         <td class="content">
           <ul>
-            <li>Termination is no longer mandatory even when there is evidence of serious harm.</li>
-            <li>Companies may instead suspend the relationship and attempt remediation.</li>
+            <li>Termination is no longer mandatory even when there is evidence of serious harm</li>
+            <li>Companies may instead suspend the relationship and attempt remediation</li>
           </ul>
         </td>
       </tr>
@@ -99,7 +99,7 @@ Proposals to change the CSDDD do not include changes in scope but rather removin
         <td class="title">Less Frequent Monitoring</td>
         <td class="content">
           <ul>
-            <li>Companies now required to assess due diligence effectiveness every five years (instead of every year), unless urgent issues arise.</li>
+            <li>Companies now required to assess due diligence effectiveness every five years (instead of every year), unless urgent issues arise</li>
           </ul>
         </td>
       </tr>
